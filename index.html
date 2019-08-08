@@ -6,6 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="/favicon.ico">
 	<title>Lesson-Anna</title>
+  <!-- ======================================================= -->
+  <!-- Подключение шрифта из Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap" rel="stylesheet">
   <!-- ===================================================== -->
   <!-- Подключение стандартного файла от bootstrap.css версии 4.2.1 -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"> -->
@@ -18,41 +21,45 @@
 <body>
 
  <!-- Первый блок -->
+
  <!-- ===================================================================== -->
  
- <!-- Главный блок с классом (block-one) для фона -->
- <div class=".block-one">
+ <!-- Главный блок с классом (page-header) для фона -->
+
+ <div class=".page-header">
 
   <!-- Див с классом меню для вывода его в одну строку -->
   <div class="menu">
    <!-- Тег (а)-ссылка для логотипа. -->
    <a href="index.html"><img src="img/" alt=""></a>
    <!-- Маркированые списки меню для шапки и кнопки (ul>li*7) -->
-   <ul>
+   <ul class="nav">  <!-- Класс (nav) для стильза-й меню -->
     <li>NOME</li>
     <li>FEATURES</li>
     <li>VIDEO</li>
     <li>SCRINS</li>
     <li>PRICING</li>
     <li>TEAM</li>
-    <li><a href=""></a>FREE TRAIL</li> <!--  в теге (а) -->
+    <li><a class="btn-free" href="">FREE TRAIL</a></li> <!--  в теге (а) кнопка, задали класс -->
   </ul> 
 </div> <!-- (menu) -->  
 
 <!-- Заголовок -->
 <h1>Best Software Landingpage</h1>
 
-<!-- Див с классом (btn) чтобы выровнить их в одну строку -->
-<div class="btn">
+<!-- Див с классом (btn-get) чтобы выровнить их в одну строку -->
+<div class="btn-get">
  <a href="">get started now</a>
  <a href="">learn more</a> 
-</div>  <!-- (btn) -->
+</div>  <!-- (btn-get) -->
 
-</div><!-- (block-one) -->
+</div><!-- (page-header) -->
 
 <!-- =========================================================== -->
-<!-- Второй блок для иконок и фона о партнерах -->
-<div class="block-two">
+
+<!-- Второй блок для иконок и фона о компании с классом (page-company)  -->
+
+<div class="page-company">
   <!-- Маркированые списки для иконок о партнерах (ul>li*4) -->
   <ul>
     <li></li>
@@ -60,22 +67,25 @@
     <li></li>
     <li></li>
   </ul> 
-</div>  <!-- (block-two) -->
-
-<!-- Блок третий с классом для стилистики -->
-<div class="block-three">
+</div>  <!-- (page-company) -->
 
 <!-- =========================================================== -->
-  <!-- Третий блок приемущество -->
-  <div class="block-feature">
+
+<!-- Блок третий с классом (page-grid) для стилистики -->
+
+<div class="page-grid">
+
+  <!-- Блок с классом (grid) для стили-ки сетки -->
+
+  <div class="grid">
 
     <!-- Второй заголовок внутри него тег спан -->
     <h2><span>Features</span>Best Features Ever Seen</h2>
 
-    <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="advantage">
+    <!-- Класс (grid-item) для стилизаций контуров карточки -->
+    <div class="grid-item">
 
-      <div class="advantage-icon"></div>  <!-- для ИКОНОК (advantage-icon) -->
+      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
       <h3>Well Documented</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
       <a href="">Read More</a>  <!-- Ссылка --> 
@@ -83,9 +93,9 @@
     </div>  <!-- (advantage) -->
 
     <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="advantage">
+    <div class="grid-item">
 
-      <div class="advantage-icon"></div>  <!-- для ИКОНОК (advantage-icon) -->
+      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
       <h3>Highly Customizeable</h3>
       <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
       <a href="">Read More</a>  <!-- Ссылка --> 
@@ -93,9 +103,9 @@
     </div>  <!-- (advantage) -->
 
     <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="advantage">
+    <div class="grid-item">
 
-      <div class="advantage-icon"></div>  <!-- для ИКОНОК (advantage-icon) -->
+      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
       <h3>Mobile Friednly Design</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
       <a href="">Read More</a>  <!-- Ссылка --> 
@@ -103,9 +113,9 @@
     </div>  <!-- (advantage) -->
 
     <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="advantage">
+    <div class="grid-item">
 
-      <div class="advantage-icon"></div>  <!-- для ИКОНОК (advantage-icon) -->
+      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
       <h3>Responsive Design</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
       <a href="">Read More</a>  <!-- Ссылка --> 
@@ -113,9 +123,9 @@
     </div>  <!-- (advantage) -->
 
     <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="advantage">
+    <div class="grid-item">
 
-      <div class="advantage-icon"></div>  <!-- для ИКОНОК (advantage-icon) -->
+      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
       <h3>24/7 Online Support</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
       <a href="">Read More</a>  <!-- Ссылка --> 
@@ -123,110 +133,175 @@
     </div>  <!-- (advantage) -->
 
     <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="advantage">
+    <div class="grid-item">
 
-      <div class="advantage-icon"></div>  <!-- для ИКОНОК (advantage-icon) -->
+      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
       <h3>24/7 Online Support</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
       <a href="">Read More</a>  <!-- Ссылка --> 
       
-    </div>  <!-- (advantage) -->
+    </div>  <!-- (grid-item) -->
 
     <div class="text">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       <p><span>Rosalina Pong</span> - Founder, uithemes</p>
     </div>
 
-  </div>   <!-- (block-feature) -->
+  </div>   <!-- (grid) -->
 
-</div>  <!-- (block-three) -->
+</div>  <!-- (page-grid) -->
 <!-- =========================================================== -->
-<!-- Четвертый блок с классом для фона синего -->
-<div class="block-four">
+<!-- Четвертый блок с классом (page-subscribe)  -->
+
+<div class="page-subscribe">
 
   <!-- Блок с классом регистрация для стилизаций всего внутренего контента -->
   <div class="Subscribe"> 
 
-  <!-- Блок с классом обвертка регистрация для контента  -->
-  <div class="wrap-Subscribe">
+    <!-- Блок с классом обвертка регистрация для контента  -->
+    <div class="wrap-Subscribe">
 
-   <h2><span>Subscribe</span>Signup For A Trail</h2> 
-   <p>Create your free account now & get 30 days free trail No credit card required</p>
-   <input type="email" placeholder="Enter your email address">
-   <button type="sibmit">Subscribe</button>
+     <h2><span>Subscribe</span>Signup For A Trail</h2> 
+     <p>Create your free account now & get 30 days free trail No credit card required</p>
+     <input type="email" placeholder="Enter your email address">
+     <button type="sibmit">Subscribe</button>
 
-  </div>   <!-- (wrap-Subscribe) -->
+   </div>   <!-- (wrap-Subscribe) -->
 
-  <img src="img/robot-1.png" alt="robot">
-    
-  </div>   <!-- (Subscribe) -->
-  
-</div>  <!-- (block-four) -->
+   <img src="img/robot-1.png" alt="robot">
+
+ </div>   <!-- (Subscribe) -->
+
+</div>  <!-- (page-subscribe) -->
 
 <!-- =========================================================== -->
-<!-- Блок пятый с классом -->
-<div class="block-five">
-  
-<h2>Grab Your  Software With Amazing  Features</h2>
+<!-- Блок пятый с классом (page-software) -->
+<div class="page-software">
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+  <h2>Grab Your  Software With Amazing  Features</h2>
 
-<dl>  <!-- Разметка с комбинацией для заголовка и подзаголовка -->
-  <dt>01. Clean Design</dt>
-  <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
-  <dt>02. Easy To Customize</dt>
-  <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
-</dl>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
 
-</div>  <!-- (block-five) -->
+  <dl>  <!-- Разметка с комбинацией для заголовка и подзаголовка -->
+    <dt>01. Clean Design</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
+    <dt>02. Easy To Customize</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
+  </dl>
 
-<!-- ================================================ -->
-<!-- Блок шестой с классом -->
-<div class="block-six">
-<!-- Через этот класс и див мы будем устанавливать фон и рамки   -->
-<div class="FUn-Facts">
-  
-<h2><span>FUn Facts</span>Some Fun Facts About Dashboard</h2>
-
-<ul>
-  <li><span>53К</span>CUP COFFEE</li>
-  <li><span>10К</span>CUP COFFEE</li>
-  <li><span>12К</span>CUP COFFEE</li>
-  <li><span>120</span>CUP COFFEE</li>
-</ul>
-
-</div>  <!-- (FUn-Facts) -->
-
-</div>  <!-- (block-six) -->
+</div>  <!-- (page-software) -->
 
 <!-- ================================================ -->
-<!-- Блок седьмой с классом -->
-<div class="block-seven">
+<!-- Блок шестой с классом (page-stat) -->
+
+<div class="page-stat">
+
+  <!-- Через этот класс и див мы будем устанавливать фон и рамки   -->
+  <div class="FUn-Facts">
+
+    <h2><span>FUn Facts</span>Some Fun Facts About Dashboard</h2>
+
+    <ul>
+      <li><span>53К</span>CUP COFFEE</li>
+      <li><span>10К</span>CUP COFFEE</li>
+      <li><span>12К</span>CUP COFFEE</li>
+      <li><span>120</span>CUP COFFEE</li>
+    </ul>
+
+  </div>  <!-- (FUn-Facts) -->
+
+</div>  <!-- (page-stat) -->
+
+<!-- ================================================ -->
+<!-- Блок седьмой с классом (page-app) -->
+
+<div class="page-app">
+
+  <div class="fon-video">
+
+    <!-- Див для групировки и выравнивания по левому краю контент   -->
+    <div class="group-cont">   
+
+      <h2>Meet With Future Landingpage</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+      <p>Available Now</p>
+
+      <ul>  <!-- маркированые списки для кнопок, внутри ссылка с аттебутом ТАРГЕТ для перехода в на новую вкладку -->
+        <li><a href="" target="_blank"></a></li>  <!-- Сюда вствим изображения -->
+        <li><a href="" target="_blank"></a></li>
+      </ul>
+
+    </div>  <!-- (group-cont) групировка с лева контент -->
+
+    <img src="img/icon-video-1.png" alt="video">
+
+  </div>  <!-- (fon-video) -->
+
+</div>  <!-- (page-app) -->
+
+<!-- ================================================== -->
+<!-- Блок восьмой с классом (page-analitics) -->
+
+<div class="page-analitics">
+
+  <!-- див с классом (fon-analitics) для фона -->  
+  <div class="fon-analitics">
+
+    <img src="" alt="">
+    <!-- див с классом (icon-analitics) для иконки -->
+    <div class="icon-analitics">
+
+     <img src="" alt=""> 
+
+     <h2>Easy To Etid & Very Easily Control</h2>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+     <a class="btn-free" href="">get started now</a> <!--  в теге (а) кнопка, задали класс -->
+
+   </div>  <!-- (icon-analitics) -->
+
+ </div> <!-- (fon-analitics) -->
+
+</div>  <!-- (page-analitics) -->
+
+<!-- ==================================================== -->
+<!-- Блок девятый с классом (page-analitics-two) -->
+
+<div class="page-analitics-two">
+
+  <!-- див с классом (fon-analitics-two) для фона -->  
+  <div class="fon-analitics-two">
+
+    <img src="" alt="">
+    <!-- див с классом (icon-analitics-two) для иконки -->
+    <div class="icon-analitics-two">
+
+     <img src="" alt=""> 
+
+     <h2>Easy To Etid & Very Easily Control</h2>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+
+     <a class="btn-free" href="">get started now</a> <!--  в теге (а) кнопка, задали класс -->
+
+   </div>  <!-- (icon-analitics-two) -->
+
+ </div> <!-- (fon-analitics-two) -->
+
+</div>  <!-- (page-analitics-two) -->
+
+<!-- ========================================================== -->
+<!-- Блок десятый с классом (page-screen) -->
+
+<div class="page-screen">
   
-<div class="fon-video">
+<h2><span>screen preview</span>Screenshot With Details</h2>
+<img src="" alt="">
 
-<!-- Див для групировки и выравнивания по левому краю контент   -->
-<div class="group-cont">   
-  
-<h2>Meet With Future Landingpage</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-
-<p>Available Now</p>
-
-<ul>  <!-- маркированые списки для кнопок, внутри ссылка с аттебутом ТАРГЕТ для перехода в на новую вкладку -->
-  <li><a href="" target="_blank"></a></li>  <!-- Сюда вствим изображения -->
-  <li><a href="" target="_blank"></a></li>
-</ul>
-
-</div>  <!-- (group-cont) групировка с лева контент -->
-
-<img src="img/icon-video-1.png" alt="video">
-
-</div>  <!-- (fon-video) -->
-
-</div>  <!-- (block-seven) -->
-
+</div>
 
 <!-- ============================================================================= -->
 

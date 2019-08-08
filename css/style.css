@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800&subset=cyrillic');
-/* Подключение шрифтов через ( @import ) Важно чтобы подключение было на самой верхней строчке */
 body {
   font-family: 'Open Sans', sans-serif;
+  color: #7581a1;
+  line-height: 2.6rem;
+  font-size: 1.6rem;
 }
 /* ============================================== */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* Базовые настройки всего документа */
 /* ================================================= */
+/* В спокойном состаянии черты не будет */
+a {
+  text-decoration: none;
+}
+/* =========================================== */
 /* у этих элиментов в состояний ФОКУСИРОВКИ не будет обводки */
 button:focus,
 input:focus,
@@ -36,3 +41,50 @@ section {
 /* ============================================== */
 /* Первый блок №1 */
 /* ============================================== */
+h1 {
+  /* Стили-ем заголовок */
+  color: #192b59;
+  font-weight: 600;
+  font-size: 8rem;
+}
+.nav {
+  /* Стили-ем класс */
+  color: #6e7ea9;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.btn-free {
+  /* Стили-ем класс */
+  background-color: #1085e4;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  padding: 25px 55px;
+}
+/* ========================================= */
+/* Третий блок */
+.grid h2 {
+  /* Стили-ем заголовок (h2) в классе */
+  color: #192b59;
+  font-weight: 700;
+  font-size: 4rem;
+}
+.grid h2 span {
+  /* Стили-ем тег (span) в классе */
+  display: block;
+  color: #1085e4;
+  font-size: 1.4rem;
+}
+.grid-item h3 {
+  /* Стили-ем заголовок (h3) в классе */
+  font-size: 2rem;
+  color: #192b59;
+  font-weight: 600;
+}
+.grid-item a {
+  /* Стили-ем ссылки (a) в классе */
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #50a6eb;
+}
