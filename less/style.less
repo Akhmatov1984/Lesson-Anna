@@ -1,93 +1,1356 @@
+/* Базовые настройки всего документа */
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: #7581a1;
-	line-height: 2.6rem;
-	font-size: 1.6rem;
+	line-height: 1.5;
+	font-size: 8px;
+	margin: 0;
+	padding: 0;
 }
+/* ============================================= */
+/* Настройка СКРОЛЛ БАРА */
+
+body::-webkit-scrollbar {  /* Это размер скролл бара, тут указывается только ширина */
+	width: 17px; /* Тут ширина */
+}
+
+body::-webkit-scrollbar-track {  /* Настройка всего скролл бара. */
+	background-color: #edf6ff;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, .2) Inset; /* Регулировка тени */
+}
+
+body::-webkit-scrollbar-thumb {  /* Настройка ползунка скролл бара. */
+	background: linear-gradient(to right, #1995b2, #194f97);  /* Гридиент задали */
+	border-radius: 15px;  /* Закруглили края скролл бара */
+	height: 130px;  /* Высота скролла */
+} 
+
+body::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to top, #1995b2, #194f97);  /* Гридиент задали */
+}
+
 /* ============================================== */
 
-* {
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 }
 
-/* Базовые настройки всего документа */
 /* ================================================= */
-/* В спокойном состаянии черты не будет */
+/* В спокойном состаянии снизу ССЫЛКИ линии не будет */
+
 a {
 	text-decoration: none;
 }
+
+/* Это свойство для того чтобы у всёх ссылок при наведение не будет обводки */
+a:hover {
+	text-decoration: none;
+}
+
 /* =========================================== */
-/* у этих элиментов в состояний ФОКУСИРОВКИ не будет обводки */
-button, input, a, textarea {  
+/* у этих элиментов в состояний ФОКУСИРОВКИ не будет обводки!!! */
+
+button,
+input,
+a,
+textarea {
 	&:focus {
 		outline: none;
 	}
 }
+
 /* ============================================== */
 
-/* Это свойство для того чтобы у всёх сылок при наведение не будет обводки */
-a:hover {        
-	text-decoration: none;   
+.wrap { /* Задаем классу ширину для всего контента, и встовляем этот класс в нужные нам блоки */
+	max-width: 1110px; /* Ширина максимальная внутренего контента (1110px) */
+	margin: 0 auto; /* внешние отстубы сверху с снизу по (0) а по бакам (auto) */
 }
+
 /* ============================================== */
 
-/* Базовый размер шрифта для всего проекта html заданый нами. */
-html {
-	font-size: 10px;    
+/* Стили кнопок и их поведение В этом макете */
+
+.btn-primary {
+	color: #fff;
+	text-transform: uppercase;
+	background-color: #1085e4;
+	border: 1px solid #1085e4;
+	cursor: pointer;
+	letter-spacing: 2.5px;  
+	border-radius: 30px;
+	font-size: 10px;
+	font-weight: 700;
+	padding: 16px 28px;
 }
-/* ============================================== */
 
-/* У всего базового шаблона будут отступы */
-section {
-	padding: 10rem 0px; /* Означает что у каждой секций сверху и снизу будет по 10rem */ 
+.btn-secondary {
+	color: #7e8bae;
+	text-transform: uppercase;
+	background-color: #cbdbe8;
+	border: 1px solid #cbdbe8;
+	cursor: pointer;
+	letter-spacing: 2.5px;
+	border-radius: 30px;
+	font-size: 10px;
+	font-weight: 700;
+	padding: 16px 28px;
 }
-/* ============================================== */
 
-/* Первый блок №1 */
-/* ============================================== */
-// .menu {
-// 	background: url(../img/header-bg.png) center no-repeat;
-// 	background-size: cover;
-// 	height: 1007px;
-// }
-h1 {  /* Стили-ем заголовок */
+.btn-info {
+	color: #8085b1;
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 1px solid #dce1e5;
+	letter-spacing: 2.5px;
+	font-size: 10px;
+	font-weight: 700;
+	padding: 16px 45px;
+	border-radius: 30px;
+}
+
+.btn-free {
+	font-weight: 400;
+	padding: 16px 42px;
+	letter-spacing: 1.7px;
+	cursor: pointer;
+}
+
+.btn-active {
+	color: #fff;
+	padding: 16px 45px;
+	background-color: #1a88e1;
+}
+
+.btn-info:hover {
+	transition: all 0.5s;
+	border: 1px solid #94b4cc;
+	background-color: #94b4cc;
+}
+
+.btn-primary:hover {
+	transition: all 0.5s;
+	background-color: #fff;
+	color: #1085e4;
+}
+
+.btn-secondary:hover {
+	transition: all 0.5s;
+	background-color: #fff;
+	color: #7e8bae;
+}
+
+.btn-active:hover {
+	transition: all 0.5s;
+	background-color: transparent; /* Это свойство делает фон прозрачным, допустив внутри кнопки. */
+}
+
+/* ===================================================== */
+/* Первый блок */
+
+.page-header {   /* Главный блок с классом (page-header) для фона */
+	background-image: url(../img/header-bg.png);  /* Вставили фон для первого экрана */
+	background-repeat: no-repeat;  /* сделали его чтобы он не повторялся */
+	background-size: cover;  /* растягивался на весь экрана */
+	padding: 40px 0px 330px; /* Отлепили верхние меню от верха ПЕЙДИНГОМ не затрагивая фон и увеличили низ фона */
+	position: relative; /* Задали родителю реальную позицию (page-header) для работы с ИЗБ (screen-img) чтобы могли двигать изображение */
+}
+
+.box-header { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex; 
+	justify-content: space-between; /* Главное меню выровняли по краям контента */
+	align-items: center; /*  кнопку и меню выровняли по горизонтали с логотипом свойство (flex) */
+	margin-bottom: 220px; /* Заголовок отодвинули от верхнего меню h1 */
+}
+
+.logo {
+	display: block; /* Задали ему размеры, сделали его блочным */
+	width: 181px;
+	height: 49px;
+	background-image: url(../img/logo-1.png)
+}
+
+h1 {
+	/* Стили-ем заголовок */
+	letter-spacing: -2.5px;
 	color: #192b59;
 	font-weight: 600;
-	font-size: 8rem;
+	font-size: 65px;
+	line-height: 1.1;
+	max-width: 540px; /* Задали максимальную ширину заголовку для того чтобы он встал в две строки */
+	margin-bottom: 58px; /* Отодвинули кнопки от заголовка */
 }
-.nav { /* Стили-ем класс */
- color: #6e7ea9;
- font-size: 1.2rem;
- font-weight: 700;
- text-transform: uppercase;
+
+.nav { /* Стили-ем класс, меню */
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	list-style-type: none; /* Этим свойством убрали боковые точки у маркированых списков */
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
-.btn-free {  /* Стили-ем класс */
- background-color: #1085e4;
- color: #fff;
- font-size: 1.2rem;
- border-radius: 30px;
- padding: 25px 55px;
+
+.nav>li {
+	padding: 0 16px; /* к маркированым спискам для меню добавили внутрение отступы */
 }
+
+.nav-item { /* Задали через этот класс цвет для меню */
+	color: #6e7ea9;
+}
+
+.btn-group a+a { /* Вложеные кнопки в классе (btn-group) Здвинули их на лева */
+	margin-left: 15px;
+}
+
+.screen-img { /* Класс для (screen) */
+	display: block; /* Принудительно изменили строчный (div) на блочный */
+	background-image: url(../img/header-screen.png);
+	background-repeat: no-repeat;
+	width: 795px;
+	height: 640px;
+	position: absolute; /* Задали изображению позицию АБСОЛЬТ (screen) для того чтобы двигать через глобальные отступы */
+	right: 0;
+	top: 160px;
+	animation-delay: 0s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+/* ======================================== */
+/* Второй блок */
+
+.page-company { /* Главный класс для второго блока */
+	background-image: url(../img/header-bg-2.png);
+	background-repeat: no-repeat; /* Для того чтобы фон не повторялся */
+	background-size: cover; /* Для того чтобы фон растягивался на всю ширену экрана. */
+	padding: 75px 0px; /* Задали внутрение отступы для того чтобы расширить блок */
+}
+
+.list-company { /* Через этот клосс мы зададим стилистику для иконок  */
+	list-style-type: none; /* убрали у маркированых списков точки */
+	display: flex;
+	justify-content: space-between; /* Расширили иконки по краям контента */
+	align-items: center;
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.list-company-item { /* Через этот класс мы зададим блочную систему */
+	display: block;
+}
+
+.company-one { /* Этот класс для первой иконки */
+	background-image: url(../img/bg-1.png);
+	flex-basis: 198px;
+	height: 58px;
+	animation-delay: -0.4s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.company-two { /* Этот класс для второй иконки */
+	background-image: url(../img/bg-2.png);
+	flex-basis: 200px;
+	height: 69px;
+	animation-delay: -0.4s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.company-three { /* Этот класс для третий иконки */
+	background-image: url(../img/bg-3.png);
+	flex-basis: 201px;
+	height: 47px;
+	animation-delay: -0.4s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.company-four { /* Этот класс для четвертой иконки */
+	background-image: url(../img/bg-4.png);
+	flex-basis: 200px;
+	height: 69px;
+	animation-delay: -0.4s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.company-2-3 {/* Создали класс чтоб подогнать по горизонтали иконки так как не сходились по линий */
+	margin-top: -15px;
+}
+
 /* ========================================= */
 /* Третий блок */
-.grid h2 {  /* Стили-ем заголовок (h2) в классе */
+
+.page-grid { /* С помощью этого главного rlfccf мы задали отступы всему контенту */
+	padding: 50px 0 50px 0;
+}
+
+.grid { /* Главный класс  ГРИД всей сетки */
+	display: grid;
+	grid-template-areas: "a b c""d b c""d f g""e f g""e h h";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 35px; /* Внешние отступы в GRID css в сетке используется свойство */
+	max-width: 1110px;
+	margin: 0 auto; /* Выровняли все плажки по центру контента */
+}
+
+.grid h2 { /* Стили-ем заголовок (h2) в классе */
 	color: #192b59;
 	font-weight: 700;
-	font-size: 4rem;
+	font-size: 35px;
+	line-height: 40px;
+	letter-spacing: -1px;
 }
-.grid h2 span {  /* Стили-ем тег (span) в классе */
-	display: block;
+
+.grid h2 span { /* Стили-ем тег (span) в классе */
+	text-transform: uppercase;
+	display: block; /* Принудительно изменили строчный тег на блочный */
 	color: #1085e4;
-	font-size: 1.4rem;
+	font-size: 12px;
+	letter-spacing: 2px;
 }
-.grid-item h3 {  /* Стили-ем заголовок (h3) в классе */
-	font-size: 2rem;
+
+.grid-item h3 { /* Стили-ем заголовок (h3) в классе */
+	font-size: 16px;
 	color: #192b59;
 	font-weight: 600;
 }
-.grid-item a {  /* Стили-ем ссылки (a) в классе */
+
+.grid-item p {
+	font-size: 13px;
+}
+
+.grid-item a { /* Стили-ем ссылки (a) в классе */
 	font-weight: 600;
-	font-size: 1.4rem;
+	font-size: 12px;
 	color: #50a6eb;
 }
+
+.grid-text {
+	font-size: 12px;
+	line-height: 1.8;
+}
+
+.grid-text span {
+	color: #192b59;
+	font-weight: 700;
+}
+
+.grid-text a {
+	color: #50a6eb;
+}
+
+/* Тут занимаемся  иконками */
+
+.grid-item { /* Класс (grid-item) для стилизаций контуров карточки */
+	text-align: center; /* Выровняли контент по центру у карточек */
+	box-shadow: 0 0 5px #f5f5f5; /* Задали тени для карточки */
+}
+
+.grid-icon { /* Общие стили для всех иконок */
+	background-repeat: no-repeat; /* чтоб иконки не повторялись */
+	display: block; /* сделали блочными */
+	height: 92px; /* Задали фиксированую высоту для всех плажек */
+	background-position: center; /* Свойство для выравнивания иконок по центру */
+}
+
+.grid-icon-1 {
+	background-image: url(../img/icon-bg-1.png);
+	background-size: 79px 82px; /* Этим свойством мы задали ширину и высоту для иконок */
+}
+
+.grid-icon-2 {
+	background-image: url(../img/icon-bg-2.png);
+	background-size: 89px 85px; /* Этим свойством мы задали ширину и высоту для иконок */
+}
+
+.grid-icon-3 {
+	background-image: url(../img/icon-bg-3.png);
+	background-size: 73px 89px; /* Этим свойством мы задали ширину и высоту для иконок */
+}
+
+.grid-icon-4 {
+	background-image: url(../img/icon-bg-4.png);
+	background-size: 103px 92px; /* Этим свойством мы задали ширину и высоту для иконок */
+}
+
+.grid-icon-5 {
+	background-image: url(../img/icon-bg-5.png);
+	background-size: 100px 87px; /* Этим свойством мы задали ширину и высоту для иконок */
+}
+
+.grid-icon-6 {
+	background-image: url(../img/icon-bg-6.png);
+	background-size: 103px 92px; /* Этим свойством мы задали ширину и высоту для иконок */
+}
+
+/* grid-area: ;  - настройка переменых */
+
+.grid-title { /* Для этого класса мы создадим свою переменую */
+	grid-area: a;
+}
+
+.grid-item-1 { /* Для этого класса мы создадим свою переменую */
+	grid-area: b;
+}
+
+.grid-item-2 { /* Для этого класса мы создадим свою переменую */
+	grid-area: c;
+}
+
+.grid-item-3 { /* Для этого класса мы создадим свою переменую */
+	grid-area: d;
+}
+
+.grid-item-4 { /* Для этого класса мы создадим свою переменую */
+	grid-area: e;
+}
+
+.grid-item-5 { /* Для этого класса мы создадим свою переменую */
+	grid-area: f;
+}
+
+.grid-item-6 { /* Для этого класса мы создадим свою переменую */
+	grid-area: g;
+}
+
+.grid-text { /* Для этого класса мы создадим свою переменую */
+	grid-area: h;
+}
+
+
+/* ======================================== */
+/* Четвертый блок */
+
+.page-subscribe {   /* Через этот класс мы всему блоку задали гридиент */
+	padding: 25px 0 28px 0; /* Задали всему блоку отступы внутрение */
+	background: rgba(10, 32, 144, 1);
+	background: -moz-linear-gradient(-45deg, rgba(10, 32, 144, 1) 0%, rgba(35, 120, 205, 1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(10, 32, 144, 1)), color-stop(100%, rgba(35, 120, 205, 1)));
+	background: -webkit-linear-gradient(-45deg, rgba(10, 32, 144, 1) 0%, rgba(35, 120, 205, 1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(10, 32, 144, 1) 0%, rgba(35, 120, 205, 1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(10, 32, 144, 1) 0%, rgba(35, 120, 205, 1) 100%);
+	background: linear-gradient(135deg, rgba(10, 32, 144, 1) 0%, rgba(35, 120, 205, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1);
+}
+
+.subscribe h2 {
+	color: #fff;
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 0; /* У главного заголовка убрали внешние нижний отступы */
+}
+
+.subscribe span {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #00bffe;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.subscribe p {
+	color: #a7b5e3;
+	font-size: 15px;
+}
+
+.box-subscribe { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-between;
+	align-items: center; /* выравниваются по линии поперечной оси. */
+}
+
+.box-subscribe-user { /* Этот класс мы зделали его родительским */
+	position: relative; /* Реальная позиция */
+}
+
+.box-subscribe-user input { /* Через этот класс (input) Задаем стилистику */
+	border: 2px solid #3f5cb1;
+	border-radius: 30px;
+	padding: 20px 180px 20px 20px; /* Задали внутрение отступы. При записи текста в инпут не будет заежать за кнопку */
+	display: block; /* Сделали его блочным чтобы он стал на всю ширину */
+	background-color: transparent; /* Сделали фон прозрачным */
+	width: 100%; /* задали ширину для инпута 100% */
+	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.placeholder {
+	color: #869cd8;
+	font-size: 12px;
+}
+
+.box-subscribe-user .btn-primary { /* Через эти классы мы будем двигать кнопку через свойство (position: absolute;) */
+	position: absolute; /* Обсалютно позицианируем кнопку */
+	top: 7px; /* С верху вниз */
+	left: 267px; /* Двигали кнопку с лева в права */
+	padding: 14px 37px;
+	font-size: 11px;
+}
+
+.subscribe {
+	flex-basis: 39%;
+}
+/* -------------------------------------------------- */
+/* Это псевдо элименты которые являются кроус-браузерными, они работают во всех браузерах */
+.box-subscribe-user input::-webkit-input-placeholder {color: #b1c3ee;}
+
+.box-subscribe-user input::-moz-placeholder {color: #b1c3ee;}
+
+.box-subscribe-user input:-moz-placeholder {color: #b1c3ee;}
+
+.box-subscribe-user input:-ms-input-placeholder {color: #b1c3ee;}
+/* -------------------------------------------------- */
+
+.robot {  /* Анимация, через этот класс задали роботу */
+	animation-delay: 0.7s; /* через сколько секунд начнётся анимация */
+	animation-duration: 1.1s; /* На сколько быстро будет сробатывать анимация */
+	animation-iteration-count: 3; /* Сколько раз будет продолжаться анимация. */
+}
+
+/* ======================================== */
+/* Пятый блок */
+
+.page-software {
+	padding: 110px 0 150px 0; /* Всему блоку задали отступы сверху и снизу */
+	position: relative; /* Задали родителю реальную позицию (.page-software) для работы с ИЗБ (header-screen-img) чтобы могли двигать изображение */
+	overflow: hidden;  
+}
+
+.page-software-Flexbox { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: flex-end;
+}
+
+.page-software-icon { /* Класс для иконки в пятоп блоке */
+	display: block; /* Принудительно изменили строчный тег на блочный */
+	width: 117px; /* Задали размеры иконки для того чтобы появилась иконка */
+	height: 97px; /* Задали размеры иконки для того чтобы появилась иконка */ 
+	background-image: url(../img/icon-bg-7.png); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -26px 0;  /* Сдвинули иконку влево, чтобы сровнять с контентом */
+}
+
+.page-software-grup { /* Задали этот класс (page-software-grup) для групировки заголовка и пораграфа */
+	max-width: 500px;  /* Задали им фиксированую ширину */
+}
+
+.scroll { /* Через этот класс стилизавали работу скролл */
+	max-width: 500px;  /* Задали им фиксированую ширину */
+	max-height: 340px; /* Задали им фиксированую высоту */
+	overflow: hidden;  /* Текст скрылм внутри блока */
+	overflow: scroll;  /* Тексту включили скролл */
+}
+
+.page-software-list::-webkit-scrollbar { /* Скролл БАР */
+	width: 4px;
+}
+
+.page-software-list::-webkit-scrollbar-thumb { /*  Настройка скролл бара */
+	border-radius: 15px;
+	background: linear-gradient(to right, #1995b2, #194f97);
+}
+
+.page-software .title-h2 {
+	letter-spacing: 0.2px; /* Межбуквенный интервал */
+	margin: 6px 0px 20px 0px;
+}
+
+.page-software p { /* Через этот класс стилизавали пораграф (p) */
+	font-size: 12px;
+	color: #7581a1;
+	line-height: 1.7; /* Межзстрочный интервал */
+	margin-bottom: 25px;  /* Отступ вниз */
+}
+
+.page-software-list dt { /* Класс для стилизации (dl) внутри (dt) */
+	font-size: 13px;
+	font-weight: 700;
+	color: #5a6789;
+	margin-bottom: 6px; 
+}
+
+.page-software-list dd { /* Класс для стилизации (dl) внутри (dd) */
+	font-size: 12px;
+	color: #7581a1;
+	margin-left: 0; /* Сдвинули текст налево в притык */
+	line-height: 1.7; /* Межзстрочный интервал */
+	margin-bottom: 25px;
+}
+
+.header-screen-img {
+	margin-top: 50px; /* Этим свойством мы отодвинули изображение от верхнего блока */
+	display: block;  /* Принудительно изменили строчный (div) на блочный */
+	background-image: url(../img/header-screen-img.png);
+	background-repeat: no-repeat;   /* не повторялось фото */
+	background-position: 0 0;
+	background-size: 100% 100%;
+	width: 930px;
+	height: 930px;
+	position: absolute; /* Задали изображению позицию АБСОЛЬТ ( header-screen-img ) для того чтобы двигать через глобальные отступы */
+	right: 0px;
+	left: -100px;
+	top: 0px;
+	bottom: 0px;
+	/* animation-delay: 0s; */ /* через сколько секунд начнётся анимация */
+	/* animation-duration: 2s; */ /* На сколько быстро будет сробатывать анимация */
+}
+
+/* ======================================== */
+/* Шестой блок */
+
+.page-stat { /*  Это главный класс в шестом блоке */
+	background-color: #edf6ff;
+	padding: 86px 0 80px 0;  /* Внутрение отступы */
+	position: relative;   /* Это поциция элимента которая фиксирована, и от которой мы будем отолкиваться. */
+}
+
+.page-stat .title-h2 {
+	text-align: center;
+}
+
+.title-h2 span {
+	display: block; /* Принудительно изменили строчный тег на блочный */
+	color: #1085e4;
+	font-size: 14px;
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: -15px 0px 15px 0px;
+}
+
+.title-h2 {
+	font-size: 40px;
+	font-weight: 600;
+	color: #192b59;
+	letter-spacing: -2px;
+	max-width: 380px; /* Максимальная высота чтоб текст встал в две строки */
+	line-height: 1.2; /* Межзстрочный интервал */
+	animation-delay: 0s; /* через сколько секунд начнётся анимация */
+	animation-duration: 1.2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.list-stat {  /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	margin-top: 30px;
+}
+
+.list-stat>li {  /* Оброщаемся к маркированым спискам */
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #1085e4;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.list-stat>li>span { /* Оброщаемся через маркированые списки к тегу span */
+	display: block;
+	font-size: 50px;
+	color: #bacbdc;
+	letter-spacing: -2px;
+	margin-bottom: -5px;
+}
+/* ---------------------------------------------- */
+/* В шестом блоке код для круга и ромбика ИЗБ */
+.object-circle {
+	display: block;  /* принудительно изменили у ИЗБ строчную конструкцию на блочную */
+	background-image: url(../img/circle-gray.png); /* Этим свойством можно воспользоваться для svg изображения */
+	position: absolute;  /* Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами. */
+	background-repeat: no-repeat;  /* Чтобы изображение не повторялось */
+	background-size: contain; /* Это свойство заполнгяет изображение по центру контейнера либо элимента или блока. */
+	left: -354px;
+	bottom: -217px;
+	width: 663px;  /* Задали ширину и высоту в пиксилях чтобы ИЗБ в (png) появилось */
+	height: 663px;
+	z-index: 0;
+}
+
+.object-rhombus {
+	display: block;  /* принудительно изменили у ИЗБ строчную конструкцию на блочную */
+	background-image: url(../img/circle-gray-2.png); /* Этим свойством можно воспользоваться для svg изображения */
+	position: absolute; /*  Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами. */
+	background-repeat: no-repeat;  /* Чтобы изображение не повторялось */
+	background-size: contain; /* Это свойство заполнгяет изображение по центру контейнера либо элимента или блока. */
+	width: 545px;  /* Задали ширину и высоту в пиксилях чтобы ИЗБ в (png) появилось */
+	height: 545px;
+	right: 0px;
+	top: -370px;
+}
+
+/* ------------------------------------ */
+/* Текст интро и его стилизация "Intro" */
+
+.Intro {
+	display: block;  /* принудительно изменили у ИЗБ строчную конструкцию на блочную */
+	position: absolute; /*  Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами. */
+	right: 0px;
+	left: 0px;
+	text-align: center; /* выровнили его по центру */
+	top: 82px;
+	opacity: 0.04; /* затемнили текст этм свойством */
+	color: #000000;
+	font-size: 300px;
+	font-weight: 900;
+	line-height: 60px;
+	letter-spacing: -9px;
+	margin: 0px;  /* Сбросили отступы для того чтобы текст поднялся наверх */
+}
+
+/* ======================================== */
+/* Седьмой блок */
+
+.page-app {  /* Главный класс блока с контентом */
+	padding: 60px 0px 100px 0px;  /* Задали отступ от главных блоков */
+	z-index: 0.4;
+}
+
+.page-app .wrap {
+	position: relative; /* Задали родителю реальную позицию (.page-app .wrap) для работы с ИЗБ (page-app-fon-video) чтобы могли двигать изображение */
+}
+
+.page-app-fon-video {
+	position: absolute; /* Задали изображению позицию АБСОЛЬТ (page-app-fon-video) для того чтобы двигать через глобальные отступы */
+	top: -100px;  /* Верх */
+	right: -20px;   /* Вправо */
+}
+
+.group-cont-title-h2 { /* Через этот класс стилизавали заголовок (h2) */
+	font-size: 40px;
+	font-weight: 600;
+	color: #192b59;
+	letter-spacing: -1px; /*  Межбуквенный интервал */
+	max-width: 380px; /* Максимальная высота чтоб текст встал в две строки */
+	line-height: 1.2; /* Межзстрочный интервал */
+	margin: 100px 0px 30px 0px;
+
+}
+
+.group-cont p { /* Через этот класс стилизавали пораграф (p) */
+	font-size: 13px;
+	color: #7581a1;
+	line-height: 1.7; /* Межзстрочный интервал */
+	margin-bottom: 25px;  /* Отступ вниз */
+}
+
+.group-cont span {  /* Через этот класс стилизавали пораграф (span) */
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	color: #c4d2dd;
+	letter-spacing: 3px;  /* межбуквеный интервал */
+}
+
+.page-app-list {
+	padding: 0px;
+	list-style-type: none;
+}
+
+.page-app-list>li {  /* Маркированые списки */
+	display: inline-block;  /* Чтобы они встали вряд, изменили блочную конструкцию на строчную */
+	margin-left: -15px;  /* Здвинули кнопки-иконки влево чтобы сровнять */
+}
+
+.page-app-list>li>a { 
+	background-image: url(../img/app.png);  /* вставели ИЗБ */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-repeat: no-repeat;  /* Чтобы не повторялось ИЗБ */
+	width: 190px;  /* Задали размеры побольше чтобы была видна тень */
+	height: 80px;  /* Задали размеры побольше чтобы была видна тень */
+	margin-top: -10px;  /* Задали отступ от иконок */
+}
+
+.page-app-list li a.page-app-android {
+	background-position: 0px 0px; /* С помощбю этого свойства мы передвигаем ИЗБ либо кнопки */
+
+}
+
+.page-app-list li a.page-app-ios {
+	background-position: -193px 0px; /* С помощбю этого свойства мы передвигаем ИЗБ либо кнопки */
+
+}
+
+.group-cont {  /* Через этот класс мы контенту задали ширину в процентах */
+	width: 45%;  /* ширина в процентах */
+}
+
+/* ======================================== */
+/* Восьмой блок */
+
+.flex-analitics { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-between; /* Контент равномерно распределяются по всей строке */
+	align-items: center;  /* Это свойство выровнел элименты по линии поперечной оси, по центру */
+}
+
+.page-analitics { /* Главный Блок восьмой с классом (page-analitics) */ 
+	background-image: url(../img/fon-analitics.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-size: cover;  /* Растянули ИЗБ */
+	padding: 100px 0px 60px 0px;
+}
+
+.analitics { /* Через этот класс стилизавали пораграф */
+	font-size: 13px;
+	color: #7581a1;
+	line-height: 1.7; /* Межзстрочный интервал */
+	margin-bottom: 25px;  /* Отступ вниз */
+}
+
+.icon-analitics { /* Див с классом (icon-analitics) для иконки */
+	display: block; /* Принудительно изменили строчный тег на блочный */
+	width: 117px;  /* Задали размеры иконки для того чтобы появилась иконка */
+	height: 97px;  /* Задали размеры иконки для того чтобы появилась иконка */ 
+	background-image: url(../img/icon-bg-7.png); 
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-size: cover;  /* Растянули ИЗБ по размеру */
+	background-position: -26px 0;  /* Сдвинули иконку влево, чтобы сровнять с контентом */
+}
+
+.zoomInLeft {
+	animation-delay: 0s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+/* ======================================== */
+/* Девятый блок */
+
+.page-analitics-two { /* Главный Блок восьмой с классом (page-analitics-two) */
+	background-image: url(../img/page-analitics-two.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: center; /* Для центровки и для резиновой верстке */
+	padding: 100px 0px 60px 0px;
+}
+
+.flex-analitics-two { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-between; /* Контент равномерно распределяются по всей строке */
+	align-items: center;  /* Это свойство выровнел элименты по линии поперечной оси, по центру */
+}
+
+.child-active { /* Этот специальный класс от (display: flex;) мы используем и настроели, для того чтобы поменять местами контент */
+	order: 1;  /* Свойство для того чтобы поменять местами контент */
+	animation-delay: 0s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.icon-analitics-two { /* Класс для иконки */
+	display: block; /* Принудительно изменили строчный тег на блочный */
+	width: 117px;  /* Задали размеры иконки для того чтобы появилась иконка */
+	height: 97px;  /* Задали размеры иконки для того чтобы появилась иконка */ 
+	background-image: url(../img/icon-bg-7.png); 
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-size: cover;  /* Растянули ИЗБ по размеру */
+	background-position: -26px 0;  /* Сдвинули иконку влево, чтобы сровнять с контентом */
+}
+
+.analitics {   /* Через этот класс мы оброщаемся порагрофу */
+	margin: 30px 0px 50px 0px; /* отступы */
+}
+
+/* ======================================== */
+/* Деcятый блок */
+
+.page-screen {  /* Блок десятый главный с классом (page-screen) */
+	background-color: #edf6ff;
+	padding: 90px 0px 0px 0px;
+	text-align: center;
+}
+
+.screen { /* класс для ИЗБ-ИЯ */
+	margin-bottom: -3px;
+	margin-top: 50px;
+	animation-delay: 0s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.title-h2 {  /* Для всех заголовков этого класса устанавливаем общие правила */
+	max-width: none;  /* Ширина максимальная (нет) */
+	margin: 0 auto;  /* внешние отстубы сверху с снизу по (0) а по бакам (auto) */
+} 
+
+/* Деcятый блок вторая его часть */
+
+.page-clients { /* Через этот класс мы обратились основным плажкам */
+	position: relative; /*  Это поциция элимента которая фиксирована, и от которой мы будем отолкиваться. */
+	margin-top: 80px; /* Отодвинули весь главный блок от вернего блока */
+	padding: 40px 0px 50px 0px; /* Внутрение отступы, для внутренего контента и наружнего блока */
+}
+
+.page-clients::before { /* С помощью этого класса и ПСЕВДОЭЛИМЕНТА  (::before) мы вставим главный фон второй части десятого блока */
+	content: ""; /* Всегда должен быть comtent: ""; у ПСЕВДОЭЛИМЕНТА  (::before) */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	width: 100%;  /* Указали ширину 100%  чтобы появилось ИЗБ */
+	height: 80%;  /* Указали высоту 80%  чтобы подогнать ИЗБ */
+	background-image: url(../img/vector.svg);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	position: absolute; /* поциция элимента который мы будет двигать ГЛОБАЛЬНЫХ  отступов */
+	left: 0; /* глобальные отступы */
+	top: 0;  /* Глобальные отступы */
+	z-index: -1; /* главный фон второй сдедали самым нижнем */
+}
+
+.title-40 span {  /* Этим классом мы стилизавали заголовок span */
+	font-size: 16px;
+	font-weight: 700;
+	color: #85c8ff;
+	letter-spacing: 2.3px;
+	text-transform: uppercase;
+}
+
+.title-40 {  /* Этим классом мы стилизавали заголовок */
+	color: #fff;
+	font-size: 32px;
+	font-weight: 600;
+	letter-spacing: -1px;
+}
+
+.box-clients { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-between;   
+}
+
+.box-clients-item { /* Дочерний класс для плажек (box-clients-item) для стилистики */
+	background-color: #fff;
+	padding: 20px 30px;  /* Задали внутрение отступы плажкам */
+	border-radius: 15px; /* Закруглили края */
+	flex-basis: 32%; /* Между плажками задали отступы этим свойством */
+	padding: 25px 40px;  /* внутренего контента отрегулировали отступы */
+	box-shadow: 0px 6px 7px -3px rgba(0,0,0,0.10); /* Добавили тень для плажек */
+	margin-top: 10px; /*  Отодвинули плажки от верхнего заголовка */
+}
+
+.box-clients-item p { /* класс для плажек (box-clients-item) для стилистики параграфов */
+	color: #8085b1;
+	font-size: 13px;
+}
+
+.box-clients-item .name { /* Через этот класс мы обратились ко второму классу */
+	color: #192b59;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 3px; /* Межзстрочный интервал отрегулировали  между классами (name и position) для пораграфов */
+	letter-spacing: -0.5px;
+}
+
+.box-clients-item .position { /* Через этот класс мы обратились ко второму классу */
+	text-transform: uppercase;
+	color: #1085e4;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.box-info { /* Общие классы для ИЗБ аватаров и для работы с (display: flex;) в CSS */
+	display: flex;
+	justify-content: flex-start; /* Этим свойством сначала растянули аватарки в высоту */
+	align-items: center; /* а после выровняли этим свойством по горизонтали с параграфами */
+}
+
+.box-info div { /* Класс для аватара */
+	padding-left: 20px; /* отодвинули влево пораграфы от аватара */
+}
+
+/* ======================================== */
+/* Блок одинацать */
+
+.page-plans { /* Основной блок */
+	text-align: center; /* Выровнели по центру текст у контента */
+	margin-top: 60px;  /* отступы сверху */
+	margin-bottom: 70px; /* отодвинули нижний блок */
+}
+
+.page-plans span { /* подзаголовок и заголовок */
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.page-plans .title-h2 {
+	font-size: 35px;
+	margin-bottom: 45px;
+}
+
+.box-price { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-between;
+	height: 100%; /* высоту сдедали 100% */
+}
+
+.box-price-item ul { /* Через этот класс обратильсь ко всем маркированым спискам */
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+.box-price-item { /* Не активные блоки */
+	background-color: #f0f6fd;
+	flex-basis: 32%;
+	padding: 0px 70px 50px;
+	animation-delay: 0.5s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+.box-price-item li {
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
+.box-price-item h3 {
+	color: #000958;
+	font-size: 55px;
+	letter-spacing: -1px;
+	margin-bottom: -5px;
+}
+
+.box-price-item h3 span:last-child {
+	color: #7b8ab2;
+}
+
+.box-price-item p {
+	color: #0084ff;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.active h3 {
+	color: #fff;
+}
+
+.active p {
+	color: #fff;
+}
+
+.active { /* Активный блок */
+	background-color: #192b59;
+	color: #fff;
+	animation-delay: 0.5s; /* через сколько секунд начнётся анимация */
+	animation-duration: 2s; /* На сколько быстро будет сробатывать анимация */
+}
+
+/* ======================================== */
+/* Двена-ть блок */
+
+.page-team { /* Главный блок (page-team) */ 
+	text-align: center; /* выровняли контент всего блока по центру */
+	background-image: url(../img/bg-team.png);
+	background-position: center; /* оно служит для того чтобы ИЗБ сжималась вместе с экраном. резиновой верстке */
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	padding: 50px 0px 117px 0px; /* Задали основному блоку и контенту внутрение отступы */
+}
+
+.box-team {  /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-between; /* Оцентровали по краям краёв */
+	margin-top: 130px; /* Отодвинули плажки от заголовка */
+}
+
+.box-team-item { /* Отдельные классы для элиментов плажек */ 
+	background-color: #fff;
+	flex-basis: 32%;  /* Между плажками задали ростояние в 32% */
+	box-shadow: 0px 6px 7px -3px rgba(0,0,0,0.10); /* Добавили тень для плажек */
+	position: relative; /*  Это поциция элимента которая фиксирована, и от которой мы будем отолкиваться. */ 
+	padding: 200px 33px 30px 33px; /* Задали основному блоку и контенту внутрение отступы */
+}
+
+.box-team-item .avatar {
+	position: absolute;  /* Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами. */
+	top: -75px; /* Верх отрицательное значение, для того чтобы ИЗБ поднялись на верх */
+	left: 0;
+	right: 0;
+	margin: 0px auto; /* Выровняли по центру ИЗБ и контент */
+}
+
+.box-team-item .position { /* Через этот класс мы обратились ко второму классу чтобы стилизовать */
+	text-transform: uppercase;
+	color: #1085e4;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.box-team-item .name {  /* Через этот класс мы обратились ко второму классу чтобы стилизовать */
+	color: #192b59;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 3px; /* Межзстрочный интервал отрегулировали  между классами (name и position) для пораграфов */
+	letter-spacing: -0.5px;
+	margin-top: 15px;  /* Отодвинули нижний заголовок от верхнего внутри плажки */
+}
+
+.Animate {
+	animation-delay: 0.3s; /* через сколько секунд начнётся анимация */
+	animation-duration: 1.2s; /* На сколько быстро будет сробатывать анимация */
+}
+/* -------------------------------------------------- */
+/* Работа с иконками под АВАТАРАМИ */
+
+.box-team-item .btn-team {  /* Через этот класс мы обращаемся второму классу кнопки работаем над кругом */
+	background-color: #f3f3f3;
+	border-radius: 100%;
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	width: 50px; /* Указали ширину и высоту иконки */
+	height: 50px;
+	margin: 0 auto; /* Выравнивание по центру */
+	border: none; /* Выключили обводку */
+	padding: 0; /* Убрали заводские отступы */
+	transition: 0.3s; /* Задали скорость эвекта кружочку */
+	cursor: pointer;  /* Свойство при наведении, курсор мышки. Появляется рука с пальчиком! */
+}
+
+.box-team-item .btn-team:hover { /* Ховер эфект при наведение для круга */
+	background-color: #1a88e1;  
+}
+
+.box-team-item .btn-more span { /* Через этот класс мы обращаемся второму классу кнопки для иконок в кружочке */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: 2px 9px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-more span:hover { /* Ховер эфект при наведение  для иконок в кружочке */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team-2.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: 2px 9px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+/* -------------------------------------------- */
+/* Работа с соцсетями */
+
+.social-team { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	list-style-type: none;  /* Это свойство уберает у маркированых списков ПУНКТЫ */
+	justify-content: space-between;
+	padding: 0px; /* убрали отступы внутрение */
+	margin: 0;  /* убрали отступы внешние для того, чтобыпо клику на кружочек, она проподала и далее появлялся этот блок и он встовал на тех же растояния */
+} 
+
+.box-team-item .btn-fb span { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке фейсбук */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -34px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-fb span:hover { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке фейсбук */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team-2.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -34px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-tw span { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке твитер */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -68px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-tw span:hover { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке фейсбук */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team-2.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -68px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-be span { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке (be) */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -103px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-be span:hover { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке фейсбук */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team-2.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -103px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-web span { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке фейсбук (web) */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -139px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+.box-team-item .btn-web span:hover { /* Через этот класс мы обращаемся к второму классу кнопки для иконок в кружочке фейсбук */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/btn-team-2.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: -139px 17px;  /* Передвижение элимента в разные растояния кардинат! Первое это влево вправо, второе это верх и вниз */
+	width: 22px;  /* Указали ширину и высоту иконки чтобы правельно встали в кругу */
+	height: 33px; 
+	margin: 0 auto; /* Выравнивание по центру */
+}
+
+/* ============================================ */
+/* Блок тринадцать */
+
+.page-form { /* Главный блок с классом (page-form) */
+	background-image: url(../img/bg-form.png);
+	background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+	background-position: center;  /* оно служит для того чтобы ИЗБ сжималась вместе с экраном. резиновой верстке */
+	background-size: cover;  /* Растянули ИЗБ */
+}
+
+.page-form div { /* Через этот класс мы оброщаемся первому диву, для того чтобы у всего внутренего контента, ностроить отступы. Через свойство (flex-basis: ;) */
+   flex-basis: 53%;
+}
+
+.Start-Your { /* Стилизуем заголовок */
+	color: #192b59;
+	font-size: 50px;
+	font-weight: 600;
+	line-height: 60px;
+	letter-spacing: -1.5px;
+}
+/* ------------------------------ */
+/* Стилизуем форму в блоке тринадцать */
+
+.contact-form { /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+   flex-direction: column; /* Это свойство расположило контент формы горизонтально и растянуло */
+}
+
+.contact-form input, .contact-form textarea { /* Через один и тот же класс обратились к двум разным элиментам */
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 60px;
+   border: 2px solid rgba(72, 72, 72, 0.1);
+   padding: 7px 60px 7px 40px; /* Внутрение отступы  у input и textarea  */
+   border-radius: 35px;
+   width: 100%; /* Ширину 100% для инпутов */
+}
+
+.contact-form textarea { /* Через этот класс ms обратились к тегу (textarea) Для ввода сообщений */
+   min-height: 160px; /* Минимальную высоту задали */
+   resize: none; /* Этим свойством мвы отключили снизу элимент растягивания, в виде иконки */
+}
+
+/* ---------------------------------------------------------------- */
+/* Это псевдо элименты которые являются кроус-браузерными, они работают во всех браузерах */
+.contact-form input::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder {color: #8995b3;}
+
+.contact-form input::-moz-placeholder, .contact-form textarea::-webkit-input-placeholder {color: #8995b3;}
+
+.contact-form input:-moz-placeholder, .contact-form textarea::-webkit-input-placeholder {color: #8995b3;;}
+
+.contact-form input:-ms-input-placeholder, .contact-form textarea::-webkit-input-placeholder {color: #8995b3;}
+/* ---------------------------------------------------------------- */
+
+.flex-form {  /* Через этот класс мы работаем с контентом который вложен в него, через настройки (display: flex;) */
+	display: flex;
+	justify-content: space-between;
+	max-width: 1110px; /* Максимальная ширина контента в этом блоке */
+	margin: 0px auto; /* выровнили контент по центру вложеный в класс (flex-form) */
+	align-items: center; /* Этим свойством мы выравнили по линии поперечной оси */ 
+}
+
+.contact-form-item { /* Через этот класс мы стилизуем общие стили инпутов */
+   margin-bottom: 20px; /* Внешние отступы межу инпутами */
+   position: relative;  /* Это поциция элимента которая фиксирована, и от которой мы будем отолкиваться. */
+}
+
+.contact-form-name::after { /* Класс для элимента работаем с (::after) */
+	content: ""; /* Контент пустой всегда должен быть */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/icon-name.png);
+   background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+   width: 13px;  /* Указали ширину и высоту чтобы ИЗБ появилось */
+   height: 15px;
+   position: absolute;  /* Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами */
+   right: 30px; /* Задали глобадьные отступы */
+   top: 30px;
+}
+
+.contact-form-email::after { /* Класс для элимента работаем с (::after) */
+	content: ""; /* Контент пустой всегда должен быть */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/icon-name-2.png);
+   background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+   width: 14px;  /* Указали ширину и высоту чтобы ИЗБ появилось */
+   height: 11px;
+   position: absolute;  /* Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами */
+   right: 30px; /* Задали глобадьные отступы */
+   top: 30px;
+}
+
+.contact-form-text::after { /* Класс для элимента работаем с (::after) */
+	content: ""; /* Контент пустой всегда должен быть */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/icon-name-3.png);
+   background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+   width: 14px;  /* Указали ширину и высоту чтобы ИЗБ появилось */
+   height: 15px;
+   position: absolute;  /* Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами */
+   right: 30px; /* Задали глобадьные отступы */
+   top: 29px;
+}
+
+.btn-bg {  /* Кнопка стилизуем */
+	position: relative; /* Это поциция элимента которая фиксирована, и от которой мы будем отолкиваться */
+	color: #fff;
+	max-width: 230px;
+	text-transform: uppercase;
+	background-color: #1085e4;
+	border: 1px solid #1085e4;
+	cursor: pointer;
+	letter-spacing: 2.5px;  
+	border-radius: 30px;
+	font-size: 10px;
+	font-weight: 700;
+	padding: 22px 40px; /* внутрение отступы для кнопки */
+	margin-top: 15px;  /* Внешние отступы от верха */
+	margin-bottom: 50px;  /* Внешние отступы от низа */
+}
+
+.contact-form .btn-bg::before {
+	content: ""; /* Контент пустой всегда должен быть */
+	display: block;  /* принудительно изменили строчную конструкцию на блочную */
+	background-image: url(../img/icon-name-4.png);
+   background-repeat: no-repeat; /* Чтобы не повторялось ИЗБ */
+   width: 18px;
+   height: 14px;
+   position: absolute;  /* Это поциция элимента с помощью которой мы будем двигать ГЛОБАЛЬНЫМИ отступами */
+   left: 258px;
+   top: 14px;
+}
+
+.btn-bg:hover { /* Ховер эвект при наведение */
+	transition: all 0.5s;
+	background-color: #fff;
+	color: #1085e4;
+}
+
+
 

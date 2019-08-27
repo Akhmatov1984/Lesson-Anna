@@ -1,512 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lesson-Anna</title>
   <!-- ===================================================================== -->
-  <!-- Фавиконы и иконки сайта с разными расширениями --> 
-  <link rel="apple-touch-icon" sizes="57x57" href="img//favicon/apple-touch-icon-57x57.png" data-mce-href="img//favicon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img//favicon/apple-touch-icon-60x60.png" data-mce-href="img//favicon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img//favicon/apple-touch-icon-72x72.png" data-mce-href="img//favicon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img//favicon/apple-touch-icon-76x76.png" data-mce-href="img//favicon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img//favicon/apple-touch-icon-114x114.png" data-mce-href="img//favicon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img//favicon/apple-touch-icon-120x120.png" data-mce-href="img//favicon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img//favicon/apple-touch-icon-144x144.png" data-mce-href="img//favicon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img//favicon/apple-touch-icon-152x152.png" data-mce-href="img//favicon/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img//favicon/apple-touch-icon-180x180.png" data-mce-href="img//favicon/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="img//favicon/favicon-32x32.png" sizes="32x32" data-mce-href="img//favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" href="img//favicon/android-chrome-192x192.png" sizes="192x192" data-mce-href="img//favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" href="img//favicon/favicon-96x96.png" sizes="96x96" data-mce-href="img//favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" href="img//favicon/favicon-16x16.png" sizes="16x16" data-mce-href="img//favicon/favicon-16x16.png">
+  <!-- Фавиконы и иконки сайта с разными расширениями -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img//favicon/apple-touch-icon-57x57.png"
+  data-mce-href="img//favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img//favicon/apple-touch-icon-60x60.png"
+  data-mce-href="img//favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img//favicon/apple-touch-icon-72x72.png"
+  data-mce-href="img//favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img//favicon/apple-touch-icon-76x76.png"
+  data-mce-href="img//favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img//favicon/apple-touch-icon-114x114.png"
+  data-mce-href="img//favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img//favicon/apple-touch-icon-120x120.png"
+  data-mce-href="img//favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img//favicon/apple-touch-icon-144x144.png"
+  data-mce-href="img//favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img//favicon/apple-touch-icon-152x152.png"
+  data-mce-href="img//favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img//favicon/apple-touch-icon-180x180.png"
+  data-mce-href="img//favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="img//favicon/favicon-32x32.png" sizes="32x32"
+  data-mce-href="img//favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="img//favicon/android-chrome-192x192.png" sizes="192x192"
+  data-mce-href="img//favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" href="img//favicon/favicon-96x96.png" sizes="96x96"
+  data-mce-href="img//favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" href="img//favicon/favicon-16x16.png" sizes="16x16"
+  data-mce-href="img//favicon/favicon-16x16.png">
   <!-- ======================================================= -->
   <!-- Подключение шрифта из Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap" rel="stylesheet">
   <!-- ============================================================= -->
+  <!-- Подключение (Animate.css) -->
+  <link rel="stylesheet" href="css/Animate.css">
+  <!-- ===================================================================== -->
   <!-- Подключение (normalize/8.0.1/normalize.min.css) -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-  <!-- ===================================================== -->
-  <!-- Подключение стандартного файла от bootstrap.css версии 4.2.1 -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"> -->
   <!-- ===================================================================== -->
-  <link  rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-</head> 
+</head>
 <!-- ===================================================================== -->
 
 <body>
 
- <!-- Первый блок -->
+  <!-- ===================================================================== -->
+  <!-- Первый блок -->
 
- <!-- ===================================================================== -->
- 
- <!-- Главный блок с классом (page-header) для фона -->
+  <div class="page-header"> <!-- Главный блок с классом (page-header) для фона -->
 
- <div class=".page-header">
+    <div class="wrap box-header"> <!-- Див с классом  (wrap) для ширины контента  --> <!-- Класс (box-header) создали для display: flex; -->
 
-  <!-- Див с классом меню для вывода его в одну строку -->
-  <div class="menu">
-   <!-- Тег (а)-ссылка для логотипа. -->
-   <a href="index.html"><img src="img/" alt=""></a>
-   <!-- Маркированые списки меню для шапки и кнопки (ul>li*7) -->
-   <ul class="nav">  <!-- Класс (nav) для стильза-й меню -->
-    <li>NOME</li>
-    <li>FEATURES</li>
-    <li>VIDEO</li>
-    <li>SCRINS</li>
-    <li>PRICING</li>
-    <li>TEAM</li>
-    <li><a class="btn-free" href="">FREE TRAIL</a></li> <!--  в теге (а) кнопка, задали класс -->
-  </ul> 
-</div> <!-- (menu) -->  
+      <a class="logo" href=""></a> <!-- Тег (а)-ссылка для логотипа. -->
 
-<!-- Заголовок -->
-<h1>Best Software Landingpage</h1>
+      <ul class="nav"> <!-- Маркированые списки меню для шапки и кнопки (ul>li*7) --> <!-- Класс (nav) для стильза-й меню -->
+        <li><a class="nav-item" href="">NOME</a></li>
+        <li><a class="nav-item" href="">FEATURES</a></li>
+        <li><a class="nav-item" href="">VIDEO</a></li>
+        <li><a class="nav-item" href="">SCRINS</a></li>
+        <li><a class="nav-item" href="">PRICING</a></li>
+        <li><a class="nav-item" href="">TEAM</a></li>
+        <li><a class="btn-free btn-primary" href="">FREE TRAIL</a></li> <!--  в теге (а) кнопка, задали класс -->
+      </ul>
 
-<!-- Див с классом (btn-get) чтобы выровнить их в одну строку -->
-<div class="btn-get">
- <a href="">get started now</a>
- <a href="">learn more</a> 
-</div>  <!-- (btn-get) -->
+    </div> <!-- (wrap) -->
 
-</div><!-- (page-header) -->
+    <div class="wrap">
 
-<!-- =========================================================== -->
+      <h1>Best Software Landingpage</h1> <!-- Заголовок первого блока -->
 
-<!-- Второй блок для иконок и фона о компании с классом (page-company)  -->
+      <div class="btn-group"> <!-- Див с классом (btn-group) чтобы выровнить их в одну строку -->
 
-<div class="page-company">
-  <!-- Маркированые списки для иконок о партнерах (ul>li*4) -->
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul> 
-</div>  <!-- (page-company) -->
+        <a class="btn-primary" href="">get started now</a>
+        <a class="btn-secondary" href="">learn more</a>
 
-<!-- =========================================================== -->
+      </div> <!-- (btn-group) -->
 
-<!-- Блок третий с классом (page-grid) для стилистики -->
+    </div> <!-- (wrap) -->
 
-<div class="page-grid">
+    <div class="screen-img wow zoomInRight"></div> <!-- Создали класс для изображения (screen-img) чтобы вставить -->
 
-  <!-- Блок с классом (grid) для стили-ки сетки -->
+  </div> <!-- (page-header) -->
 
-  <div class="grid">
+  <!-- =========================================================== -->
+  <!-- Второй блок -->
 
-    <!-- Второй заголовок внутри него тег спан -->
-    <h2><span>Features</span>Best Features Ever Seen</h2>
+  <div class="page-company"> <!-- Второй блок для иконок и фона о компании с классом (page-company)  -->
 
-    <!-- Класс (grid-item) для стилизаций контуров карточки -->
-    <div class="grid-item">
 
-      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
-      <h3>Well Documented</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
-      <a href="">Read More</a>  <!-- Ссылка --> 
-      
-    </div>  <!-- (advantage) -->
-
-    <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="grid-item">
-
-      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
-      <h3>Highly Customizeable</h3>
-      <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
-      <a href="">Read More</a>  <!-- Ссылка --> 
-      
-    </div>  <!-- (advantage) -->
-
-    <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="grid-item">
-
-      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
-      <h3>Mobile Friednly Design</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
-      <a href="">Read More</a>  <!-- Ссылка --> 
-      
-    </div>  <!-- (advantage) -->
-
-    <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="grid-item">
-
-      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
-      <h3>Responsive Design</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
-      <a href="">Read More</a>  <!-- Ссылка --> 
-      
-    </div>  <!-- (advantage) -->
-
-    <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="grid-item">
-
-      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
-      <h3>24/7 Online Support</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
-      <a href="">Read More</a>  <!-- Ссылка --> 
-      
-    </div>  <!-- (advantage) -->
-
-    <!-- Класс advantage для стилизаций контуров карточки -->
-    <div class="grid-item">
-
-      <div class="grid-icon"></div>  <!-- для ИКОНОК (grid-icon) -->
-      <h3>24/7 Online Support</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed don eiusmod tempor incididunt.</p>
-      <a href="">Read More</a>  <!-- Ссылка --> 
-      
-    </div>  <!-- (grid-item) -->
-
-    <div class="text">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <p><span>Rosalina Pong</span> - Founder, uithemes</p>
-    </div>
-
-  </div>   <!-- (grid) -->
-
-</div>  <!-- (page-grid) -->
-<!-- =========================================================== -->
-<!-- Четвертый блок с классом (page-subscribe)  -->
-
-<div class="page-subscribe">
-
-  <!-- Блок с классом регистрация для стилизаций всего внутренего контента -->
-  <div class="Subscribe"> 
-
-    <!-- Блок с классом обвертка регистрация для контента  -->
-    <div class="wrap-Subscribe">
-
-     <h2><span>Subscribe</span>Signup For A Trail</h2> 
-     <p>Create your free account now & get 30 days free trail No credit card required</p>
-     <input type="email" placeholder="Enter your email address">
-     <button type="sibmit">Subscribe</button>
-
-   </div>   <!-- (wrap-Subscribe) -->
-
-   <img src="img/robot-1.png" alt="robot">
-
- </div>   <!-- (Subscribe) -->
-
-</div>  <!-- (page-subscribe) -->
-
-<!-- =========================================================== -->
-<!-- Блок пятый с классом (page-software) -->
-<div class="page-software">
-
-  <h2>Grab Your  Software With Amazing  Features</h2>
-
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-
-  <dl>  <!-- Разметка с комбинацией для заголовка и подзаголовка -->
-    <dt>01. Clean Design</dt>
-    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
-    <dt>02. Easy To Customize</dt>
-    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
-  </dl>
-
-</div>  <!-- (page-software) -->
-
-<!-- ================================================ -->
-<!-- Блок шестой с классом (page-stat) -->
-
-<div class="page-stat">
-
-  <!-- Через этот класс и див мы будем устанавливать фон и рамки   -->
-  <div class="FUn-Facts">
-
-    <h2><span>FUn Facts</span>Some Fun Facts About Dashboard</h2>
-
-    <ul>
-      <li><span>53К</span>CUP COFFEE</li>
-      <li><span>10К</span>CUP COFFEE</li>
-      <li><span>12К</span>CUP COFFEE</li>
-      <li><span>120</span>CUP COFFEE</li>
+    <ul class="list-company"> <!-- Маркированые списки для иконок о партнерах (ul>li*4) -->
+      <li class="list-company-item company-one wow bounceInLeft"></li>
+      <li class="list-company-item company-two company-2-3 wow bounceInUp"></li>
+      <li class="list-company-item company-three company-2-3 wow bounceInUp"></li>
+      <li class="list-company-item company-four wow bounceInRight"></li>
     </ul>
 
-  </div>  <!-- (FUn-Facts) -->
+  </div> <!-- (page-company) -->
 
-</div>  <!-- (page-stat) -->
+  <!-- =========================================================== -->
+  <!-- Третий блок -->
 
-<!-- ================================================ -->
-<!-- Блок седьмой с классом (page-app) -->
+  <div class="page-grid"> <!-- Блок третий с классом (page-grid) для стилистики основного блока  -->
 
-<div class="page-app">
+    <div class="grid"> <!-- Блок с классом (grid) для настройки сетки grid -->
 
-  <div class="fon-video">
+      <h2 class="grid-title"><span>Features</span>Best Features<br>Ever Seen</h2> <!-- Второй заголовок внутри него тег спан -->
+      
+      <div class="grid-item grid-item-1"> <!-- Класс (grid-item) для стилизаций контуров карточки -->
 
-    <!-- Див для групировки и выравнивания по левому краю контент   -->
-    <div class="group-cont">   
+        <div class="grid-icon grid-icon-1"></div> <!-- для ИКОНОК общий класс (grid-icon) -->
+        <h3>Well Documented</h3>
+        <p>Lorem ipsum dolor sit amet, conse<br>ctetur adipisicing elit, sed don<br>eiusmod tempor incididunt.</p>
+        <a href="">Read More</a> <!-- Ссылка -->
 
-      <h2>Meet With Future Landingpage</h2>
+      </div> <!-- grid-item -->
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+      <div class="grid-item grid-item-2"> <!-- Класс grid-item для стилизаций контуров карточки -->
 
-      <p>Available Now</p>
+        <div class="grid-icon grid-icon-2"></div> <!-- для ИКОНОК (grid-icon) -->
+        <h3>Highly Customizeable</h3>
+        <p>Lorem ipsum dolor sit amet, conse<br>ctetur adipisicing elit, sed don<br>eiusmod tempor incididunt.</p>
+        <a href="">Read More</a> <!-- Ссылка -->
 
-      <ul>  <!-- маркированые списки для кнопок, внутри ссылка с аттебутом ТАРГЕТ для перехода в на новую вкладку -->
-        <li><a href="" target="_blank"></a></li>  <!-- Сюда вствим изображения -->
-        <li><a href="" target="_blank"></a></li>
+      </div> <!-- (grid-icon) -->
+
+      <div class="grid-item grid-item-3"> <!-- Класс grid-item для стилизаций контуров карточки -->
+
+        <div class="grid-icon grid-icon-3"></div> <!-- для ИКОНОК (grid-icon) -->
+        <h3>Mobile Friednly Design</h3>
+        <p>Lorem ipsum dolor sit amet, conse<br>ctetur adipisicing elit, sed don<br>eiusmod tempor incididunt.</p>
+        <a href="">Read More</a> <!-- Ссылка -->
+
+      </div> <!-- (grid-item) -->
+
+      <div class="grid-item grid-item-4"> <!-- Класс grid-item для стилизаций контуров карточки -->
+
+        <div class="grid-icon grid-icon-4"></div> <!-- для ИКОНОК (grid-icon) -->
+        <h3>Responsive Design</h3>
+        <p>Lorem ipsum dolor sit amet, conse<br>ctetur adipisicing elit, sed don<br>eiusmod tempor incididunt.</p>
+        <a href="">Read More</a> <!-- Ссылка -->
+
+      </div> <!-- (grid-item) -->
+
+      <div class="grid-item grid-item-5"> <!-- Класс grid-item для стилизаций контуров карточки -->
+
+        <div class="grid-icon grid-icon-5"></div> <!-- для ИКОНОК (grid-icon) -->
+        <h3>24/7 Online Support</h3>
+        <p>Lorem ipsum dolor sit amet, conse<br>ctetur adipisicing elit, sed don<br>eiusmod tempor incididunt.</p>
+        <a href="">Read More</a> <!-- Ссылка -->
+
+      </div> <!-- (grid-item) -->
+
+      <div class="grid-item grid-item-6"> <!-- Класс grid-item для стилизаций контуров карточки -->
+
+        <div class="grid-icon grid-icon-6"></div> <!-- для ИКОНОК (grid-icon) -->
+        <h3>24/7 Online Support</h3>
+        <p>Lorem ipsum dolor sit amet, conse<br>ctetur adipisicing elit, sed don<br>eiusmod tempor incididunt.</p>
+        <a href="">Read More</a> <!-- Ссылка -->
+
+      </div> <!-- (grid-item) -->
+
+      <div class="grid-text">  <!-- Класс для стилизации текста -->
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br>labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <br>laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.</p>
+        <p><span>Rosalina Pong</span> <a href="">- Founder, uithemes</a></p>
+
+      </div> <!-- grid-text -->
+
+    </div> <!-- (grid) -->
+
+  </div> <!-- (page-grid) -->
+
+  <!-- =========================================================== -->
+  <!-- Четвёртый блок -->
+  
+  <div class="page-subscribe"> <!-- Четвертый блок с классом (page-subscribe)  -->
+
+    <div class="wrap box-subscribe"> <!-- Блок с классом (wrap) для контента И класс (box-subscribe) для работы с (display: flex;) -->
+
+      <div class="subscribe"> <!-- Блок с классом обвертка регистрация для контента  -->
+
+        <h2><span>Subscribe</span><br>Signup For A Trail</h2>
+        <p>Create your free account now & get 30 days free<br>trail No credit card required</p>
+
+        <div class="box-subscribe-user"> <!-- Класс (box-subscribe-user) для стилизации инпута и кнопки -->
+
+          <input class="placeholder" type="email" placeholder="Enter your email address">
+
+          <button class="btn-primary" type="sibmit">Subscribe</button>  <!-- кнопка -->
+
+        </div> <!-- (box-subscribe-user) -->
+
+      </div> <!-- (Subscribe) -->
+
+      <img class="robot wow shake" src="img/robot-1.png" alt="robot">
+
+    </div> <!-- (wrap box-subscribe) -->
+
+  </div> <!-- (page-subscribe) -->
+
+  <!-- =========================================================== -->
+  <!-- Блок пятый -->
+  
+  <div class="page-software"> <!-- Блок пятый с классом (page-software) -->
+
+    <div class="wrap page-software-Flexbox"> <!-- Создали этот класс (page-software-Flexbox) и всё вложили в него для работы с (display: flex;) -->
+
+      <div> <!-- Этот ДИВ cоздали для контента, так как не сдвигалось всё в лево, он служит сейчас как родитель для дочерних элиментов -->
+
+        <div class="page-software-icon"></div>  <!-- Этот ДИВ и класс для иконки -->
+
+        <div class="page-software-grup"> <!-- Задали этот класс (page-software-grup) для групировки заголовка и пораграфа -->
+
+          <h2 class="title-h2">Grab Your Software <br>With Amazing Features</h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+          </p>
+
+        </div>
+
+        <dl class="page-software-list scroll"> <!-- Разметка с комбинацией для заголовка и подзаголовка Тег (dl) --> <!-- Класс page-software-list для стилизации -->
+
+          <dt>01. Clean Design</dt>
+
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
+
+          <dt>02. Easy To Customize</dt>
+
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
+
+          <dt>03. Easy To Customize</dt>
+
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
+
+          <dt>04. Easy To Customize</dt>
+
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
+
+          <dt>05. Easy To Customize</dt>
+
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>
+
+          <dt>06. Easy To Customize</dt>
+
+          <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</dd>  
+
+        </dl> <!-- Тег (dl) -->
+
+      </div>
+
+    </div>  <!-- page-software-Flexbox -->
+
+    <div class="header-screen-img"></div> <!-- Создали класс для изображения (header-screen-img) чтобы вставить -->
+
+  </div> <!-- (page-software) -->
+
+  <!-- ================================================ -->
+  <!-- Блок шестой -->
+
+  <div class="page-stat"> <!-- Блок шестой с классом (page-stat) -->
+
+    <div class="wrap"> <!-- Этот класс в диве (wrap) через который мы зададим ширину для контента  -->
+
+      <p class="Intro">Intro</p>  <!-- Текст интро и его стилизация "Intro" -->
+
+      <h2 class="title-h2 wow zoomInDown"><span>FUn Facts</span>Some Fun Facts<br>About Dashboard</h2>
+
+      <ul class="list-stat">  <!-- Маркированые списки с классом (list-stat) для работы display: flex; -->
+        <li><span>53К</span>Layouts</li>
+        <li><span>10К</span>projects</li>
+        <li><span>12К</span>cup coffee</li>
+        <li><span>120</span>awards</li>
       </ul>
 
-    </div>  <!-- (group-cont) групировка с лева контент -->
+    </div> <!-- (wrap) -->
 
-    <img src="img/icon-video-1.png" alt="video">
+    <div class="object-circle"></div> <!-- Через этот класс и ДИВ мы установим ИЗБ (svg) -->
+    <div class="object-rhombus"></div> <!-- Через этот класс и ДИВ мы установим ИЗБ (svg) -->
 
-  </div>  <!-- (fon-video) -->
+  </div> <!-- (page-stat) -->
 
-</div>  <!-- (page-app) -->
+  <!-- ================================================ -->
+  <!-- Блок седьмой -->
 
-<!-- ================================================== -->
-<!-- Блок восьмой с классом (page-analitics) -->
+  <div class="page-app"> <!-- Блок седьмой с классом (page-app) -->
 
-<div class="page-analitics">
+    <div class="wrap fon-video"> <!-- Див с классом (fon-video) -->
 
-  <!-- див с классом (fon-analitics) для фона -->  
-  <div class="fon-analitics">
+      <div class="group-cont"> <!-- Див (group-cont) для групировки и выравнивания по левому краю контент   -->
 
-    <img src="" alt="">
-    <!-- див с классом (icon-analitics) для иконки -->
-    <div class="icon-analitics">
+        <h2 class="group-cont-title-h2">Meet With<br>Future Landingpage</h2>
 
-     <img src="" alt=""> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
 
-     <h2>Easy To Etid & Very Easily Control</h2>
+        <p><span>Available Now</span></p>
 
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        <ul class="page-app-list"> <!-- маркированые списки для кнопок, внутри ссылка с аттебутом ТАРГЕТ для перехода в на новую вкладку -->
 
-     <a class="btn-free" href="">get started now</a> <!--  в теге (а) кнопка, задали класс -->
+          <li><a class="page-app-android" href="" target="_blank"></a></li> <!-- Через ссылки в маркированных списков, в файле CSS через background-image: url(../img/); вставим ИЗБ -->
+          <li><a class="page-app-ios" href="" target="_blank"></a></li> <!-- Через ссылки в маркированных списков, в файле CSS через background-image: url(../img/); вставим ИЗБ -->
 
-   </div>  <!-- (icon-analitics) -->
+        </ul>
 
- </div> <!-- (fon-analitics) -->
+      </div> <!-- (group-cont) групировка с лева контент -->
 
-</div>  <!-- (page-analitics) -->
+      <a class="page-app-fon-video" href=""><img src="img/icon-video-1.png" alt="video"></a> <!-- Гипер ссылка в ней ИЗБ для видоса -->
 
-<!-- ==================================================== -->
-<!-- Блок девятый с классом (page-analitics-two) -->
+    </div> <!-- (fon-video) -->
 
-<div class="page-analitics-two">
+  </div> <!-- (page-app) -->
 
-  <!-- див с классом (fon-analitics-two) для фона -->  
-  <div class="fon-analitics-two">
+  <!-- ================================================== -->
+  <!-- Восьмой блок -->
 
-    <img src="" alt="">
-    <!-- див с классом (icon-analitics-two) для иконки -->
-    <div class="icon-analitics-two">
+  <div class="page-analitics"> <!-- Блок восьмой с классом (page-analitics) внего вставим фон серез CSS -->
 
-     <img src="" alt=""> 
+    <div class="wrap flex-analitics"> <!-- див с классом (flex-analitics) для работы с (display: flex;) -->
 
-     <h2>Easy To Etid & Very Easily Control</h2>
+      <img class="wow zoomInLeft" src="img/screen-analitics.png" alt="screen"> <!-- Для ИЗБ использовали (screen-analitics.png) -->
 
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+      <div> <!-- див служит для обёртки, как дочерний элимент, чтобы иконка вастала правельно. -->
 
-     <a class="btn-free" href="">get started now</a> <!--  в теге (а) кнопка, задали класс -->
+        <div class="icon-analitics"></div> <!-- див с классом (icon-analitics) для иконки. Стилизуем в CSS -->
 
-   </div>  <!-- (icon-analitics-two) -->
+        <h2 class="title-h2">Limpon Is Suitable For<br>Anytype LandingPage</h2>
 
- </div> <!-- (fon-analitics-two) -->
+        <p class="analitics">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis<br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
 
-</div>  <!-- (page-analitics-two) -->
+          <a class="btn-free btn-primary" href="">get started now</a> <!--  в теге (а) кнопка, задали класс -->
 
-<!-- ========================================================== -->
-<!-- Блок десятый с классом (page-screen) -->
+        </div>  <!-- дочерний -->
 
-<div class="page-screen">
+      </div> <!-- (fon-analitics) -->
 
-  <h2><span>screen preview</span>Screenshot With Details</h2>
-  <img src="" alt="">
+    </div> <!-- (page-analitics) -->
 
-</div>
+    <!-- ==================================================== -->
+    <!-- Девятый блок -->
 
-<div class="page-clients">  <!-- Блок (страница клиенты) -->
+    <div class="page-analitics-two"> <!-- Блок девятый с классом (page-analitics-two) внего вставим фон серез CSS -->
 
-  <h2><span>testimonials</span>Our Happy Clients</h2>
+      <div class="wrap flex-analitics-two"> <!-- див с классом (flex-analitics-two) для работы с (display: flex;) -->
 
-  <div class="box-clients">   <!-- Блок (Бокс клиенты) -->
+        <img class="child-active wow zoomInRight" src="img/screen-analitics-two.png" alt="screen"> <!-- ИЗБ задали специальный класс, для того чтобы воспользоваться (display: flex;) -->
 
-    <p>It is a long established fact that a readher will be distracted by the readable content of a page when looking.</p>
-    <p class="name">Rolin B. Mirano</p>
-    <p class="position">ceo, uihub</p>
+        <div class="flex-basis"> <!-- див служит для обёртки, как дочерний элимент, чтобы иконка вастала правельно. -->
 
-  </div>  <!-- (box-clients) -->
+          <div class="icon-analitics-two"></div> <!-- див с классом (icon-analitics-two) для иконки Стилизуем в CSS -->
 
-  <div class="box-clients">
+          <h2 class="title-h2">Easy To Etid &<br>Very Easily Control</h2>
 
-    <p>It is a long established fact that a readher will be distracted by the readable content of a page when looking.</p>
-    <p class="name">Rolin B. Mirano</p>
-    <p class="position">ceo, uihub</p>
+          <p class="analitics">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis<br>nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
 
-  </div>  <!-- (box-clients) -->
+            <a class="btn-free btn-primary" href="">get started now</a> <!--  в теге (а) кнопка, задали класс -->
 
-  <div class="box-clients">
+          </div>  <!-- дочерний -->
 
-    <p>It is a long established fact that a readher will be distracted by the readable content of a page when looking.</p>
-    <p class="name">Rolin B. Mirano</p>
-    <p class="position">ceo, uihub</p>
+        </div> <!-- (fon-analitics-two) -->
 
-  </div>  <!-- (box-clients) -->
+      </div> <!-- (page-analitics-two) -->
 
-</div>  <!-- (page-clients) -->
+      <!-- ========================================================== -->
+      <!-- Блок десятый -->
 
-<div class="page-plans">
+      <div class="page-screen"> <!-- Блок десятый с классом (page-screen) -->
 
-  <h2><span>our plans</span>Pricing Plans</h2>
+        <h2 class="title-h2"><span>screen preview</span>Screenshot With Details</h2>
 
-  <div class="box-price">  <!-- Блок (Бокс прайс) -->
+        <img class="screen wow zoomIn" src="img/screen.png" alt="">
 
-    <div class="box-price-atem">  <!-- Блок (box-price-atem) -->
+      </div> <!-- page-screen -->
 
-      <h3>Free</h3>
-      <p><strong>starter</strong></p>
+      <!-- ========================================================== -->
+      <!-- Блок десятый вторая его часть -->
 
-      <ul>  <!-- Маркированые списки -->
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-      </ul>
+      <div class="page-clients"> <!-- Блок (страница клиенты) (page-clients) для фона -->
 
-      <a href="">choose plan</a>  <!-- Кнопка --> 
+        <div class="wrap"> <!-- Этот класс в диве (wrap) через который мы зададим ширину для контента  -->
 
-    </div>  <!-- box-price-atem) -->
+          <h2 class="title-40"><span>testimonials</span><br>Our Happy Clients</h2>
 
-    <div class="box-price-atem active">  <!-- Блок (box-price-atem) -->
+          <div class="box-clients"> <!-- Назначили класс для общей обёртки РОДИТЕЛЯ для плажек, для работы с (display: flex;) в CSS -->
 
-      <h3><span>$</span>90<span>/mo</span></h3>
-      <p><strong>starter</strong></p>
+            <div class="box-clients-item">   <!-- Дочерний класс для плажек (box-clients-item) для стилистики в CSS -->
 
-      <ul>  <!-- Этот маркированый список с классом (active) -->
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-      </ul>
+              <p>It is a long established fact that a readher<br>will be distracted by the readable<br>content of a page when
+              looking.</p>
 
-      <a href="">choose plan</a>  <!-- Кнопка --> 
+              <div class="box-info"> <!-- Общие классы для ИЗБ аватаров и для работы с (display: flex;) в CSS -->
+                <img src="img/avatar.png" alt="Ava">  <!-- Для ИЗБ аватар -->
+                <div>  <!-- Этот див служит родителём для порагрофов -->
+                  <p class="name">Rolin B. Mirano</p>
+                  <p class="position">ceo, uihub</p>
+                </div>
+              </div>
+              
+            </div>   <!-- box-clients-item -->
 
-    </div>  <!-- (box-price-atem) -->
 
-    <div class="box-price-atem">  <!-- Блок (box-price-atem) -->
+            <div class="box-clients-item">  <!-- Дочерний класс для плажек (box-clients-item) для стилистики в CSS -->
 
-      <h3><span>$</span>350<span>/mo</span></h3>
-      <p><strong>starter</strong></p>
+              <p>It is a long established fact that a readher<br>will be distracted by the readable<br>content of a page when
+              looking.</p>
 
-      <ul>  <!-- Маркированые списки -->
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-        <li>Unlimited users Active</li>
-      </ul>
+              <div class="box-info"> <!-- Общие классы для ИЗБ аватаров и для работы с (display: flex;) в CSS -->
+                <img src="img/avatar.png" alt="Ava">  <!-- Для ИЗБ аватар -->
+                <div>  <!-- Этот див служит родителём для порагрофов -->
+                  <p class="name">Rolin B. Mirano</p>
+                  <p class="position">ceo, uihub</p>
+                </div>
+              </div>
+              
+            </div>   <!-- box-clients-item -->
 
-      <a href="">choose plan</a>  <!-- Кнопка --> 
 
-    </div>  <!-- (box-price-atem) -->
+            <div class="box-clients-item">  <!-- Дочерний класс для плажек (box-clients-item) для стилистики в CSS -->
 
-  </div>
+              <p>It is a long established fact that a readher<br>will be distracted by the readable<br>content of a page when
+              looking.</p>
 
-</div>  <!-- (page-plans) -->
+              <div class="box-info"> <!-- Общие классы для ИЗБ аватаров и для работы с (display: flex;) в CSS -->
+                <img src="img/avatar.png" alt="Ava"> <!-- Для ИЗБ аватар -->
+                <div>  <!-- Этот див служит родителём для порагрофов -->
+                  <p class="name">Rolin B. Mirano</p>
+                  <p class="position">ceo, uihub</p>
+                </div>
+              </div>
+              
+            </div>   <!-- box-clients-item -->
 
-<!-- ========================================================== -->
-<!-- Блок одинацать с классом (page-team) -->
 
-<div class="page-team">
+          </div>  <!-- box-clients -->
 
-<h2><span>angels</span>Our Team</h2>
+        </div> <!-- (wrap) -->
 
-<div class="box-team">  <!-- Блок с классом блок команды -->
-  
+      </div> <!-- (page-clients) -->
 
+      <!-- ========================================================== -->
+      <!-- Блок одинацать -->
 
-</div>  <!-- (box-team) -->
+      <div class="page-plans"> <!-- Блок одинацать с классом (page-team) -->
 
-<div>
-  
-<p>founder</p>
-<p>Ricardo T. Obrien</p>
+        <div class="wrap">
 
-</div>
+          <h2 class="title-h2"><span>our plans</span>Pricing Plans</h2> <!-- Заголовок -->
 
-<div>
-  
-<p>ceor</p>
-<p>Alberto Del Rio</p>
+          <div class="box-price"> <!-- Блок (Бокс прайс) (box-price) -->
 
-</div>
+            <div class="box-price-item wow bounceInLeft"> <!-- Блок (box-price-atem) -->
 
-<div>
-  
-<p>designer</p>
-<p>Thomas Alva Adison</p>
+              <h3>Free</h3>
+              <p><strong>starter</strong></p>
 
-</div>
+              <ul> <!-- Маркированые списки -->     
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+              </ul>
 
-</div>  <!-- (page-team) -->
+              <a class="btn-info" href="">choose plan</a> <!-- Кнопка -->
 
-<!-- ========================================================== -->
-<!-- Блок двенацать с классом (page-form) -->
+            </div> <!-- box-price-item) -->
 
-<div class="page-form">
-  
-<h2>Start Your Free Trail No Need Credit Card.</h2>
+            <div class="box-price-item active wow bounceInUp"> <!-- Блок с двумя классами (box-price-item) и (active) активная позиция всей плажки -->
 
-<form action="">  <!-- форма -->
-  
-<input type="text" placeholder="Enter your name here">
-<input type="email" placeholder="Enter your email here">
-<textarea name="textMessage" placeholder="Enter your message here"></textarea>
-<button type="button"><span></span>submit now</button> 
+              <h3><span>$</span>90<span>/mo</span></h3>
+              <p><strong>starter</strong></p>
 
-</form>
+              <ul> <!-- Этот маркированый список с классом (active) --> 
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+              </ul>
 
-</div>  <!-- (page-form) -->
+              <a class="btn-primary btn-active" href="">choose plan</a> <!-- Кнопка -->
 
-<!-- ========================================================== -->
-<!-- Блок footer с классом (page-footer) -->
+            </div> <!-- (box-price-atem) -->
 
-<div class="page-footer">
-  
-<p>Made With Love & Copyright By - <a href="">limpon</a></p>
+            <div class="box-price-item box wow bounceInRight"> <!-- Блок (box-price-item) -->
 
-<ul class="social">  <!-- класс социальные сети -->
-  <li><a href="" target="-blank"></a></li>
-  <li><a href="" target="-blank"></a></li>
-  <li><a href="" target="-blank"></a></li>
-  <li><a href="" target="-blank"></a></li>
-  <li><a href="" target="-blank"></a></li>
-</ul>
 
-</div>  <!-- (page-footer) -->
+              <h3><span>$</span>350<span>/mo</span></h3>
+              <p><strong>starter</strong></p>
 
-<!-- ============================================================================= -->
+              <ul> <!-- Маркированые списки -->
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+                <li>Unlimited users Active</li>
+              </ul>
 
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
+              <a class="btn-info" href="">choose plan</a> <!-- Кнопка -->
 
+            </div> <!-- (box-price-item) и (active) -->
 
-</body>
+          </div> <!-- (box-price) -->
 
-</html>
+        </div> <!-- (wrap) -->
 
+      </div> <!-- (page-plans) -->
 
+      <!-- ========================================================== -->
+      <!-- Блок двенадцать -->
 
+      <div class="page-team"> <!-- Блок двенадцать (page-team) -->
 
+        <div class="wrap">
 
+          <h2 class="title-40 Animate wow zoomInDown"><span>angels</span><br>Our Team</h2>
 
+          <div class="box-team"> <!-- Блок с классом (box-team) перевод (блок команды) для работы с (display: flex;) в CSS -->
 
 
+            <div class="box-team-item">  <!-- Отдельные классы для элиментов -->
 
+              <img class="avatar" src="img/Ricardo.png" alt="AVA"> <!-- Добавили ИЗБ -->
 
+              <p class="position">founder</p> <!-- Задади класс (position) для пораграфов одинаковый -->
+              <p class="name">Ricardo T. Obrien</p>  <!-- Задади класс (name) для пораграфов одинаковый -->
 
+              <button class="btn-team btn-more btn-Ricardo" type="button"><span></span></button> <!-- Тег кнопка с нашим классом (btn-more) а этот класс (btn-team) будет для общих стилей, (span) и в нем крестик элимент -->
 
+              <ul class="social-team social-Ricardo" style="display:none;"> <!-- Марркированые список с классом (social-team) для силизации а также присвоели атребут от (js) style="display:none;" который отлючает в настоящее время элимент -->
+                <li><a href="" target="_blank" class="btn-team btn-fb"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-tw"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-be"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-web"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+              </ul>
 
+            </div>  <!-- box-team-item -->
 
+            <div class="box-team-item">  <!-- Отдельные классы для элиментов -->
 
+              <img class="avatar" src="img/Alberto.png" alt="AVA">  <!-- Добавили ИЗБ -->
+
+              <p class="position">ceor</p>  <!-- Задади класс (position) для пораграфов одинаковый -->
+              <p class="name">Alberto Del Rio</p>  <!-- Задади класс (name) для пораграфов одинаковый -->
+
+              <button class="btn-team btn-more btn-Alberto" type="button"><span></span></button> <!-- Тег кнопка с нашим классом (btn-more) а этот класс (btn-team) будет для общих стилей -->
+
+              <ul class="social-team social-Alberto" style="display:none;"> <!-- Марркированые список с классом (social-team) для силизации а также присвоели атребут от (js) style="display:none;" который отлючает в настоящее время элимент -->
+                <li><a href="" target="_blank" class="btn-team btn-fb"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-tw"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-be"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-web"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+              </ul>
+
+            </div> <!-- box-team-item -->
+
+            <div class="box-team-item">  <!-- Отдельные классы для элиментов -->
+
+              <img class="avatar" src="img/Thomas.png" alt="AVA">  <!-- Добавили ИЗБ -->
+
+              <p class="position">designer</p>  <!-- Задади класс (position) для пораграфов одинаковый -->
+              <p class="name">Thomas Alva Adison</p>  <!-- Задади класс (name) для пораграфов одинаковый -->
+
+              <button class="btn-team btn-more btn-Thomas" type="button"><span></span></button> <!-- Тег кнопка с нашим классом (btn-more) а этот класс (btn-team) будет для общих стилей -->
+
+              <ul class="social-team social-Thomas" style="display:none;"> <!-- Марркированые список с классом (social-team) для силизации а также присвоели атребут от (js) style="display:none;" который отлючает в настоящее время элимент -->
+                <li><a href="" target="_blank" class="btn-team btn-fb"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-tw"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-be"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+                <li><a href="" target="_blank" class="btn-team btn-web"><span></span></a></li> <!-- Специально создали блок (li) для Ссылки внутри которой будет атребут (target="_blank") для того чтобы информация открываться на новой вкладке, и класс (btn-team) для того чтобы появились кружочек -->
+              </ul>
+
+            </div> <!-- box-team-item -->
+
+          </div>  <!-- (box-team) -->
+
+        </div>  <!-- (wrap) -->
+
+      </div>  <!-- (page-team) -->
+
+      <!-- ========================================================== -->
+      <!-- Блок тринадцать --> 
+
+      <div class="page-form"> <!-- Блок тринадцать с классом (page-form) -->
+
+        <div class="flex-form"> <!-- Создали див с классом (flex-form) для контента и для работы с (display: flex;) -->
+
+          <img class="wow zoomInLeft" src="img/screen-analitics-two.png" alt="img"> <!-- Для ИЗБ -->
+
+          <div>
+
+            <h2 class="Start-Your">Start Your Free Trail<br>No Need Credit Card.</h2>
+
+            <form class="contact-form" action="SendLetter"> <!-- Тег форма с классом (contact-form) для работы с (display: flex;) -->
+
+              <div class="contact-form-item contact-form-name"><input type="text" placeholder="Enter your name here"></div>  <!-- Инпуты для ввода ИМЯ и ФМ внутри ДИВОВ, чтобы мы могли присвойть псевдоэлименты. А так же добавили класс (contact-form-item) в инпуты для position: relative; -->
+
+              <div class="contact-form-item contact-form-email"><input type="email" placeholder="Enter your email here"></div>  <!-- Инпуты для ввода ИМЯ и ФМ внутри ДИВОВ, чтобы мы могли присвойть псевдоэлименты. А так же добавили класс (contact-form-item) в инпуты для position: relative; -->
+
+              <div class="contact-form-item contact-form-text"><textarea name="textMessage" placeholder="Enter your message here"></textarea></div>  <!-- Сообщение для ввода -->
+
+              <button class="btn-bg" type="button"><span></span>submit now</button>
+
+            </form>  <!-- contact-form -->
+
+          </div>
+          
+        </div>  <!-- (flex-form) -->
+contact-form
+      </div> <!-- (page-form) -->
+
+      <!-- ========================================================== -->
+      <!-- Блок footer -->
+
+      <div class="page-footer"> <!-- Блок footer с классом (page-footer) -->
+
+        <p>Made With Love & Copyright By - <a href="">limpon</a></p>
+
+        <ul class="social"> <!-- класс социальные сети маркированые списки -->
+          <li><a href="" target="-blank"></a></li>
+          <li><a href="" target="-blank"></a></li>
+          <li><a href="" target="-blank"></a></li>
+          <li><a href="" target="-blank"></a></li>
+          <li><a href="" target="-blank"></a></li>
+        </ul>
+
+      </div> <!-- (page-footer) -->
+
+      <!-- ============================================================================= -->
+      <!-- Подключение wow.min.js и его инициализация. Это (Animate.css) -->
+      <script src="js/wow.min.js"></script>
+      <script>
+        var wow = new WOW;
+        wow.init();
+      </script>
+      <!-- ============================================================================== -->
+      <!-- Подключение стороних файлов (min.js) для работы с (jquery) -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <!-- ====================================================== -->
+      <!-- Подключение паралакс эфектов с папки js Подключение должно быть в самом в конце всех СКРИПТОВ -->
+      <script src="js/parallax.min.js"></script>
+      <!-- ===================================================================== -->
+      <!-- Подключение jQuery и его инициализация, для кружочков и социальных ситей. Чтобы они появлялись при клике, ставится этот код в конце СТОРОНИХ файлов от (min.js) -->
+      <script> /*код всегда пишется внутри тега (script)*/
+      $(document).ready(function(){ /*Основной документ ready function - перевод (готовая функция)*/
+        $(".btn-Ricardo").click(function(){ /*Тут встовляем класс который указывали в кнопке в скобках, с атребутом (click) для того чтобы работал функция КЛИКАБЕЛЬНОСТЬ*/
+          $(".btn-Ricardo").hide(); /*Тут встовляем класс который указывали в кнопке в скобках, с атребутом (hide) для того чтобы быстро исчезал кружочек который уже нажат ,*/
+          $(".social-Ricardo").fadeIn(); /*Тут встовляем класс который указывали в (ul) и поставили атребут ( fadeIn ) для того чтобы постепенное появление сработало элимента.*/
+        });
+        $(".btn-Alberto").click(function(){ /*Тут встовляем класс который указывали в кнопке в скобках, с атребутом (click) для того чтобы работал функция КЛИКАБЕЛЬНОСТЬ*/
+          $(".btn-Alberto").hide(); /*Тут встовляем класс который указывали в кнопке в скобках, с атребутом (hide) для того чтобы быстро исчезал кружочек который уже нажат ,*/
+          $(".social-Alberto").fadeIn(); /*Тут встовляем класс который указывали в (ul) и поставили атребут ( fadeIn ) для того чтобы постепенное появление сработало элимента.*/
+        });
+        $(".btn-Thomas").click(function(){ /*Тут встовляем класс который указывали в кнопке в скобках, с атребутом (click) для того чтобы работал функция КЛИКАБЕЛЬНОСТЬ*/
+          $(".btn-Thomas").hide(); /*Тут встовляем класс который указывали в кнопке в скобках, с атребутом (hide) для того чтобы быстро исчезал кружочек который уже нажат ,*/
+          $(".social-Thomas").fadeIn(); /*Тут встовляем класс который указывали в (ul) и поставили атребут ( fadeIn ) для того чтобы постепенное появление сработало элимента.*/
+        });
+      });
+    </script>
+    <!-- ============================================================================= -->
+  </body>
+
+  </html>

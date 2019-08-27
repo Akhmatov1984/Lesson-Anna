@@ -1,0 +1,660 @@
+/* Базовые настройки всего документа */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #7581a1;
+  line-height: 1.5;
+  font-size: 8px;
+  margin: 0;
+  padding: 0;
+}
+/* ============================================== */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* ================================================= */
+/* В спокойном состаянии снизу ССЫЛКИ линии не будет */
+a {
+  text-decoration: none;
+}
+/* Это свойство для того чтобы у всёх ссылок при наведение не будет обводки */
+a:hover {
+  text-decoration: none;
+}
+/* =========================================== */
+/* у этих элиментов в состояний ФОКУСИРОВКИ не будет обводки!!! */
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+/* ============================================== */
+.wrap {
+  /* Задаем классу ширину для всего контента, и встовляем этот класс в нужные нам блоки */
+  /* width: 100%;   Ширина основная (100%) */
+  max-width: 1110px;
+  /* Ширина максимальная внутренего контента (1170px) */
+  margin: 0 auto;
+  /* внешние отстубы сверху с снизу по (0) а по бакам (auto) */
+}
+/* ============================================== */
+/* Стили кнопок и их поведение В этом макете */
+.btn-primary {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #1085e4;
+  border: 1px solid #1085e4;
+  cursor: pointer;
+  letter-spacing: 2.5px;
+  /* Это свойство увеличивает между буквами интервал */
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 16px 28px;
+}
+.btn-secondary {
+  color: #7e8bae;
+  text-transform: uppercase;
+  background-color: #cbdbe8;
+  border: 1px solid #cbdbe8;
+  cursor: pointer;
+  letter-spacing: 2.5px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 16px 28px;
+}
+.btn-info {
+  color: #8085b1;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #dce1e5;
+  letter-spacing: 2.5px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 16px 45px;
+  border-radius: 30px;
+}
+.btn-free {
+  font-weight: 400;
+  padding: 16px 42px;
+  letter-spacing: 1.7px;
+  cursor: pointer;
+}
+.btn-active {
+  color: #fff;
+  padding: 16px 45px;
+  background-color: #1a88e1;
+}
+.btn-info:hover {
+  transition: all 0.5s;
+  border: 1px solid #94b4cc;
+  background-color: #94b4cc;
+}
+.btn-primary:hover {
+  transition: all 0.5s;
+  background-color: #fff;
+  color: #1085e4;
+}
+.btn-secondary:hover {
+  transition: all 0.5s;
+  background-color: #fff;
+  color: #7e8bae;
+}
+.btn-active:hover {
+  transition: all 0.5s;
+  background-color: transparent;
+}
+/* Первый блок №1
+============================================== */
+.page-header {
+  background-image: url(../img/header-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0px 330px;
+  /* Отлепили верхние меню от верха ПЕЙДИНГОМ не затрагивая фон и увеличили низ фона */
+  position: relative;
+  /* Задали родителю реальную позицию (screen) чтобы могли двигать изображение */
+}
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  /* Главное меню выровняли по краям контента */
+  align-items: center;
+  /*  кнопку и меню выровняли по горизонтали с логотипом */
+  margin-bottom: 220px;
+  /* Заголовок отодвинули от верхнего меню h1 */
+}
+.logo {
+  display: block;
+  /* Задали ему размеры, сделали его блочным */
+  width: 181px;
+  height: 49px;
+  background-image: url(../img/logo-1.png);
+}
+h1 {
+  /* Стили-ем заголовок */
+  letter-spacing: -2.5px;
+  color: #192b59;
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 1.1;
+  max-width: 540px;
+  /* Задали максимальную ширину заголовку для того чтобы он встал в две строки */
+  margin-bottom: 58px;
+  /* Отодвинули кнопки от заголовка */
+}
+.nav {
+  /* Стили-ем класс, меню */
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  list-style-type: none;
+  /* Этим свойством убрали боковые точки у маркированых списков */
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.nav > li {
+  padding: 0 16px;
+  /* к маркированым спискам для меню добавили внутрение отступы */
+}
+.nav-item {
+  /* Задали через этот класс цвет для меню */
+  color: #6e7ea9;
+}
+.btn-group a + a {
+  /* Вложеные кнопки в классе (btn-group) Здвинули их на лева */
+  margin-left: 15px;
+}
+.screen-img {
+  /* Класс для (screen) */
+  display: block;
+  /* Принудительно изменили строчный (div) на блочный */
+  background-image: url(../img/header-screen.png);
+  background-repeat: no-repeat;
+  width: 795px;
+  height: 640px;
+  position: absolute;
+  /* Задали изображению позицию АБСОЛЬТ (screen) для того чтобы двигать через глобальные отступы */
+  right: 0;
+  top: 160px;
+  animation-delay: 0s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+/* ======================================== */
+/* Второй блок */
+.page-company {
+  /* Главный класс для второго блока */
+  background-image: url(../img/header-bg-2.png);
+  background-repeat: no-repeat;
+  /* Для того чтобы фон не повторялся */
+  background-size: cover;
+  /* Для того чтобы фон растягивался на всю ширену экрана. */
+  padding: 75px 0px;
+  /* Задали внутрение отступы для того чтобы расширить блок */
+}
+.list-company {
+  /* Через этот клосс мы зададим стилистику для иконок  */
+  list-style-type: none;
+  /* убрали у маркированых списков точки */
+  display: flex;
+  justify-content: space-between;
+  /* Расширили иконки по краям контента */
+  align-items: center;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.list-company-item {
+  /* Через этот класс мы зададим блочную систему */
+  display: block;
+}
+.company-one {
+  /* Этот класс для первой иконки */
+  background-image: url(../img/bg-1.png);
+  flex-basis: 198px;
+  height: 58px;
+  animation-delay: -0.4s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+.company-two {
+  /* Этот класс для второй иконки */
+  background-image: url(../img/bg-2.png);
+  flex-basis: 200px;
+  height: 69px;
+  animation-delay: -0.4s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+.company-three {
+  /* Этот класс для третий иконки */
+  background-image: url(../img/bg-3.png);
+  flex-basis: 201px;
+  height: 47px;
+  animation-delay: -0.4s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+.company-four {
+  /* Этот класс для четвертой иконки */
+  background-image: url(../img/bg-4.png);
+  flex-basis: 200px;
+  height: 69px;
+  animation-delay: -0.4s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+.company-2-3 {
+  /* Создали класс чтоб подогнать по 
+	горизонтали иконки так как не сходились по линий */
+  margin-top: -15px;
+}
+/* ========================================= */
+/* Третий блок */
+.page-grid {
+  /* С помощью этого главного rlfccf мы задали отступы всему контенту */
+  padding: 50px 0 50px 0;
+}
+.grid {
+  /* Главный класс  ГРИД всей сетки */
+  display: grid;
+  grid-template-areas: "a b c" "d b c" "d f g" "e f g" "e h h";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 35px;
+  /* Внешние отступы в GRID css в сетке используется свойство */
+  max-width: 1110px;
+  margin: 0 auto;
+  /* Выровняли все плажки по центру контента */
+}
+.grid h2 {
+  /* Стили-ем заголовок (h2) в классе */
+  color: #192b59;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+.grid h2 span {
+  /* Стили-ем тег (span) в классе */
+  text-transform: uppercase;
+  display: block;
+  /* Принудительно изменили строчный тег на блочный */
+  color: #1085e4;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.grid-item h3 {
+  /* Стили-ем заголовок (h3) в классе */
+  font-size: 16px;
+  color: #192b59;
+  font-weight: 600;
+}
+.grid-item p {
+  font-size: 13px;
+}
+.grid-item a {
+  /* Стили-ем ссылки (a) в классе */
+  font-weight: 600;
+  font-size: 12px;
+  color: #50a6eb;
+}
+.grid-text {
+  font-size: 12px;
+  line-height: 1.8;
+}
+.grid-text span {
+  color: #192b59;
+  font-weight: 700;
+}
+.grid-text a {
+  color: #50a6eb;
+}
+/* Тут занимаемся  иконками */
+.grid-item {
+  /* Класс (grid-item) для стилизаций контуров карточки */
+  text-align: center;
+  /* Выровняли контент по центру у карточек */
+  box-shadow: 0 0 5px #f5f5f5;
+  /* Задали тени для карточки */
+}
+.grid-icon {
+  /* Общие стили для всех иконок */
+  background-repeat: no-repeat;
+  /* чтоб иконки не повторялись */
+  display: block;
+  /* сделали блочными */
+  height: 92px;
+  /* Задали фиксированую высоту для всех плажек */
+  background-position: center;
+  /* Свойство для выравнивания иконок по центру */
+}
+.grid-icon-1 {
+  background-image: url(../img/icon-bg-1.png);
+  background-size: 79px 82px;
+  /* Этим свойством мы задали ширину и высоту для иконок */
+}
+.grid-icon-2 {
+  background-image: url(../img/icon-bg-2.png);
+  background-size: 89px 85px;
+  /* Этим свойством мы задали ширину и высоту для иконок */
+}
+.grid-icon-3 {
+  background-image: url(../img/icon-bg-3.png);
+  background-size: 73px 89px;
+  /* Этим свойством мы задали ширину и высоту для иконок */
+}
+.grid-icon-4 {
+  background-image: url(../img/icon-bg-4.png);
+  background-size: 103px 92px;
+  /* Этим свойством мы задали ширину и высоту для иконок */
+}
+.grid-icon-5 {
+  background-image: url(../img/icon-bg-5.png);
+  background-size: 100px 87px;
+  /* Этим свойством мы задали ширину и высоту для иконок */
+}
+.grid-icon-6 {
+  background-image: url(../img/icon-bg-6.png);
+  background-size: 103px 92px;
+  /* Этим свойством мы задали ширину и высоту для иконок */
+}
+/* grid-area: ;  - настройка переменых */
+.grid-title {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: a;
+}
+.grid-item-1 {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: b;
+}
+.grid-item-2 {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: c;
+}
+.grid-item-3 {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: d;
+}
+.grid-item-4 {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: e;
+}
+.grid-item-5 {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: f;
+}
+.grid-item-6 {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: g;
+}
+.grid-text {
+  /* Для этого класса мы создадим свою переменую */
+  grid-area: h;
+}
+/* ======================================== */
+/* Четвертый блок */
+.page-subscribe {
+  padding: 25px 0 28px 0;
+  /* Задали всему блоку отступы внутрение */
+  background: #0a2090;
+  background: -moz-linear-gradient(-45deg, #0a2090 0%, #2378cd 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #0a2090), color-stop(100%, #2378cd));
+  background: -webkit-linear-gradient(-45deg, #0a2090 0%, #2378cd 100%);
+  background: -o-linear-gradient(-45deg, #0a2090 0%, #2378cd 100%);
+  background: -ms-linear-gradient(-45deg, #0a2090 0%, #2378cd 100%);
+  background: linear-gradient(135deg, #0a2090 0%, #2378cd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a2090', endColorstr='#2378cd', GradientType=1);
+}
+.subscribe h2 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 0;
+  /* У главного заголовка убрали внешние нижний отступы */
+}
+.subscribe span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00bffe;
+  font-size: 12px;
+  font-weight: 700;
+}
+.subscribe p {
+  color: #a7b5e3;
+  font-size: 15px;
+}
+.box-subscribe {
+  /* Класс для работы (display: flex;) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* выравниваются по линии поперечной оси. */
+}
+.box-subscribe-user {
+  /* Этот класс мы зделали его родительским */
+  position: relative;
+  /* Реальная позиция */
+}
+.box-subscribe-user input {
+  /* Через этот класс (input) Задаем стилистику */
+  border: 2px solid #3f5cb1;
+  border-radius: 30px;
+  padding: 20px 180px 20px 20px;
+  /* Задали внутрение отступы. При записи текста в инпут не будет заежать за кнопку */
+  display: block;
+  /* Сделали его блочным чтобы он стал на всю ширину */
+  background-color: transparent;
+  /* Сделали фон прозрачным */
+  width: 100%;
+  /* задали ширину для инпута 100% */
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+.placeholder {
+  color: #869cd8;
+  font-size: 12px;
+}
+.box-subscribe-user .btn-primary {
+  /* Через эти классы мы будем двигать кнопку через свойство (position: absolute;) */
+  position: absolute;
+  /* Обсалютно позицианируем кнопку */
+  top: 7px;
+  /* С верху вниз */
+  left: 267px;
+  /* Двигали кнопку с лева в права */
+  padding: 14px 37px;
+  font-size: 11px;
+}
+.subscribe {
+  flex-basis: 39%;
+}
+/* Это псевдо элименты которые являются кроус-браузерными, они работают во всех браузерах */
+.box-subscribe-user input::-webkit-input-placeholder {
+  color: #b1c3ee;
+}
+.box-subscribe-user input::-moz-placeholder {
+  color: #b1c3ee;
+}
+.box-subscribe-user input:-moz-placeholder {
+  color: #b1c3ee;
+}
+.box-subscribe-user input:-ms-input-placeholder {
+  color: #b1c3ee;
+}
+.robot {
+  animation-delay: 0.7s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 1.1s;
+  /* На сколько быстро будет сробатывать анимация */
+  animation-iteration-count: 3;
+  /* Сколько раз будет продолжаться анимация. */
+}
+/* ======================================== */
+/* Пятый блок */
+/* ======================================== */
+/* Шестой блок */
+.page-stat {
+  background-color: #edf6ff;
+  padding: 86px 0 80px 0;
+}
+.page-stat .title-h2 {
+  text-align: center;
+}
+.title-h2 span {
+  display: block;
+  /* Принудительно изменили строчный тег на блочный */
+  color: #1085e4;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: -15px 0px 15px 0px;
+}
+.title-h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #192b59;
+  letter-spacing: -2px;
+  max-width: 380px;
+  /* Максимальная высота чтоб текст встал в две строки */
+  /* margin: 0 auto; */
+  /* Отцентрировали тест */
+  line-height: 1.2;
+  /* Межзстрочный интервал */
+  /* margin-bottom: 20px; */
+  animation-delay: 0s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 1.2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+.list-stat {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-top: 30px;
+}
+.list-stat > li {
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #1085e4;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.list-stat > li > span {
+  display: block;
+  font-size: 50px;
+  color: #bacbdc;
+  letter-spacing: -2px;
+  margin-bottom: -5px;
+}
+/* ======================================== */
+/* Седьмой блок */
+/* ======================================== */
+/* Восьмой блок */
+/* ======================================== */
+/* Девятый блок */
+/* ======================================== */
+/* Деcятый блок */
+.page-screen {
+  background-color: #edf6ff;
+  padding: 90px 0 0 0;
+  text-align: center;
+}
+.screen {
+  /* класс для ИЗБ-ИЯ */
+  margin-bottom: -3px;
+  margin-top: 50px;
+  animation-delay: 0s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+.page-screen .title-h2 {
+  text-align: center;
+}
+.title-h2 {
+  max-width: none;
+  margin: 0 auto;
+}
+/* ======================================== */
+/* Одина-ть блок */
+.page-plans {
+  /* Основной блок */
+  text-align: center;
+  /* Выровнели по центру текст у контента */
+}
+.page-plans span {
+  font-size: 16px;
+  margin-bottom: 10;
+}
+.page-plans .title-h2 {
+  font-size: 35px;
+  margin-bottom: 45px;
+}
+.box-price {
+  /* Тут мы выравнили блоки относительно ширине контента */
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.box-price-atem ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.box-price-atem {
+  /* Не активные блоки */
+  background-color: #f0f6fd;
+  flex-basis: 32%;
+  padding: 0px 70px 50px;
+  animation-delay: 0, 5s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+.box-price-atem li {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.box-price-atem h3 {
+  color: #000958;
+  font-size: 55px;
+  letter-spacing: -1px;
+  margin-bottom: -5px;
+}
+.box-price-atem h3 span:last-child {
+  color: #7b8ab2;
+}
+.box-price-atem p {
+  color: #0084ff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.active h3 {
+  color: #fff;
+}
+.active p {
+  color: #fff;
+}
+.active {
+  /* Активный блок */
+  background-color: #192b59;
+  color: #fff;
+  animation-delay: 0, 5s;
+  /* через сколько секунд начнётся анимация */
+  animation-duration: 2s;
+  /* На сколько быстро будет сробатывать анимация */
+}
+/* ======================================== */
+/* Двена-ть блок */
